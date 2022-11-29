@@ -1,0 +1,26 @@
+{
+    "config": {
+        "postsPerPage": 12,
+        "tagsPostsPerPage": 12,
+        "authorsPostsPerPage": 12,
+        "excerptLength": 25,
+        "logo": ""
+    },
+    "customConfig": {
+        "mainWidth": "860px",
+        "sidebarWidth": "300px",
+        "selectedPosts": "",
+        "amountSelectedtPosts": "3",
+        "authors": true,
+        "authorsNumber": "5",
+        "fontSize": "1",
+        "faviconUpload": "",
+        "faviconExtension": "image/x-icon"
+    },
+    "postConfig": {
+        "displayAuthorBio": 1
+    },
+    "defaultTemplates": {
+        "post": ""
+    }
+}

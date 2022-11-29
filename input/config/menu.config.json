@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Editorial",
+        "position": "mainMenu",
+        "items": [
+            {
+                "id": 1669411629196,
+                "label": "This Issue",
+                "title": "issue",
+                "type": "tag",
+                "target": "_self",
+                "rel": "issue",
+                "link": 1,
+                "cssClass": "iss",
+                "isHidden": false,
+                "items": []
+            }
+        ]
+    }
+]

@@ -1,0 +1,163 @@
+{{! Front page; this file renders a front page with a list of the latest posts }}
+{{> head}}
+{{> navbar}}
+<main>
+   {{! hero class="hero" }}
+  <div class="hero flex justify-between">
+
+    {{! carousel content based on carousel feature tag}}
+   <div class="pr-6 pt-24">
+    <p class="bitfont text-4xl break-words"> Write to your legislator, about your concerns on the state of schools</p>
+    <p class="prose lg:prose-xl bitfont text-2xl" x-data="{ message: 'I ❤️ the fact that we can run Alpine here,' }" x-text="message">      
+    </p>
+    <p class="text-lg font-extralight">but some things at school does concern me</p>
+ 
+        {{! loop through hero post feature to get one author only }}
+            {{#author}}
+                {{name}}
+            {{/author}}  
+    </div>
+    <figure>
+        <img src="./assets/images/donofeat.jpeg" width="720px">
+    </figure>
+  </div>
+  <div class="container columns-2 py-24"> 
+
+    {{! loop that generates a list of posts }}
+    {{#each featuredPosts}}
+            <article class="my-24 p-4" >
+                {{! featured image }}
+                {{#featuredImage}}
+                    {{! checks if an image exists }}
+                    {{#if url}}
+                        <figure>
+                            <img
+                                src="{{url}}"
+                                {{! checks if the Responsive Images option (located in Site Settings -> Website Speed) is enabled  }}
+                                {{#if @config.site.responsiveImages}}
+                                    {{responsiveImageAttributes 'featuredImage' srcset sizes}}
+                                {{/if}}
+                                {{! generates a native loading attribute; if the Media Lazy Load option (located in Site Settings -> Website Speed) is disabled, the loading attribute is not generated  }}
+                                {{lazyload "lazy"}}
+                                height="{{height}}"
+                                width="{{width}}"
+                                alt="{{alt}}">
+
+                                {{! checks if a caption and credits exist  }}
+                                {{#checkIfAny caption credits}}
+                                    <figcaption>
+                                        {{caption}}
+                                        {{credits}}
+                                    </figcaption>                      
+                                {{/checkIfAny}}
+                                {{! /checks if a caption and credits exist  }}
+
+                        </figure>
+                    {{/if}}
+                    {{! /checks if an image exists }}
+                {{/featuredImage}}
+                {{! /featured image }}
+
+                {{! post title }}
+                 <h2 class="text-2xl mt-4 font-bold bitfont">
+                    <a href="{{url}}">{{title}}</a> 
+                </h2>
+                {{! /post title }}
+
+                {{! post creation date }}
+                
+                {{!-- <time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}">
+                    {{date createdAt}}
+                </time> --}}
+
+                {{! /post creation date }}
+
+                {{! post excerpt - the Custom excerpt is generated when the Read More button is used when editing a post }}
+                <article class="flex justify-between">
+                {{#if hasCustomExcerpt}}
+                    {{{ excerpt }}}
+                {{else}}
+                    <p class="divide-y-0">{{{ excerpt }}} </p> 
+                {{/if}}
+                 
+                </article>
+                {{! /post excerpt }}
+
+                {{! post author }}
+                {{#author}}
+                <section class="flex space-x-4 my-4">
+                    <div class="my-4">
+                    <img 
+                        src="{{avatarImage.url}}" 
+                        {{lazyload "lazy"}} 
+                        alt="{{avatarImage.alt}}" 
+                        {{!-- height="{{avatarImage.height}}"  
+                        width="{{avatarImage.width}}" --}}
+                        width="60px"
+                        height="20px"
+                        class="rounded-full"
+                        >
+                    </div>
+                    <div>
+                    <a href="{{url}}">{{name}}</a>
+                        {{/author}}
+                    {{! /post author }}   
+
+                    {{! main tag - if no main tag is selected, then the first tag in the list of all tags will be used }}
+                    {{#if mainTag}}
+                        <a href="{{mainTag.url}}">{{mainTag.name}}</a>
+                    {{/if}}
+                    {{! /main tag }}
+                    <br>
+                    <small>The author has an excerpt here. Something interesting to say maybe</small> </div>
+                    <article class="border-x w-1/3"><i class="fa fa-bookmark-o ml-2"></i> <small class="ml-2"><a>READ LATER</a></small></article>
+                </section>
+            </article>
+    {{/each}}
+
+    {{#each posts}}
+        <br>
+        <article class="">
+               <h3 class="my-8 font-bold bitfont">
+                    <a href="{{url}}">{{title}}</a>
+              </h3>
+
+                {{! main tag - if no main tag is selected, then the first tag in the list of all tags will be used }}
+                {{#if mainTag}}
+                    <a href="{{mainTag.url}}">{{mainTag.name}}</a>
+                {{/if}}
+                {{! /main tag }}
+
+                {{! post excerpt - the Custom excerpt is generated when the Read More button is used when editing a post }}
+                {{#if hasCustomExcerpt}}
+                    {{{ excerpt }}}
+                {{else}}
+                    <p>{{{ excerpt }}}</p>
+                {{/if}}
+                {{! /post excerpt }}
+                {{#author}}
+                <div class="flex space-x-0.5 my-4 ">
+                    <small class="ml-2 w-1/2"> 
+                     <time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}">
+                        {{date createdAt}}
+                    </time>
+                    <a href="{{url}}">{{name}}</a></small> <p class="border-x"><small><i class="fa fa-bookmark-o "> </i> READ LATER</small></p>
+                     {{! post creation date }}
+                
+                {{! /post creation date }}
+                </div>
+                {{/author}}
+        </article>
+    {{/each}}
+    {{! /loop that generates list of posts }}
+  </div>
+  <hr>
+    
+</main>
+
+{{!-- <aside>
+    {{> sidebar}}
+</aside> --}}
+
+{{> pagination}}
+{{> footer}}

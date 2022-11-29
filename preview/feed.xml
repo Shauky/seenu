@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>seenu</title>
+    <link href="file:////Users/devi4nt/Documents/Publii/sites/seenu/preview/feed.xml" rel="self" />
+    <link href="file:////Users/devi4nt/Documents/Publii/sites/seenu/preview" />
+    <updated>2022-11-28T19:22:35+05:00</updated>
+    <author>
+        <name>Editor @Seenu</name>
+    </author>
+    <id>file:////Users/devi4nt/Documents/Publii/sites/seenu/preview</id>
+
+    <entry>
+        <title>މިއީ މުޅިން އާ ޕޯސްޓެކެވެ</title>
+        <author>
+            <name>Editor @Seenu</name>
+        </author>
+        <link href="file:////Users/devi4nt/Documents/Publii/sites/seenu/preview/miee-mulin-aa-poastekeve.html"/>
+        <id>file:////Users/devi4nt/Documents/Publii/sites/seenu/preview/miee-mulin-aa-poastekeve.html</id>
+
+        <updated>2022-11-28T19:22:35+05:00</updated>
+            <summary>
+                <![CDATA[
+                    ލޯރަމް އިޕްސަމް އަކީ އެއްވެސް މާނައެއްނެތް ގޮތަކަށް ވެބްސައިޓެއް ނުވަތަލިޔުމެއް އަވަހަށް ފުރާލުމަށް ހެދިފައިވާ ލިޔުމެކެވެ. މިލިޔުން ތަފާތުވާ ގޮތަކީ ...
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>ލޯރަމް އިޕްސަމް އަކީ އެއްވެސް މާނައެއްނެތް ގޮތަކަށް ވެބްސައިޓެއް ނުވަތަލިޔުމެއް އަވަހަށް ފުރާލުމަށް ހެދިފައިވާ ލިޔުމެކެވެ. މިލިޔުން ތަފާތުވާ ގޮތަކީ ...</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Dear Editor</title>
+        <author>
+            <name>Editor @Seenu</name>
+        </author>
+        <link href="file:////Users/devi4nt/Documents/Publii/sites/seenu/preview/dear-editor.html"/>
+        <id>file:////Users/devi4nt/Documents/Publii/sites/seenu/preview/dear-editor.html</id>
+            <category term="education"/>
+
+        <updated>2022-11-28T19:03:14+05:00</updated>
+            <summary>
+                <![CDATA[
+                    އެޑިޓަރަށް, ވެދުން ސަލާމަށްފަހު ލިޔަމެވެ. އަހަރުގެ އަދި ކްލާހުގެ އެންމެ ފަހުދުވަސްތަށް ގުނަމުން އަންނަ އިރު އަހުރެން މިހުރީ ހައިރާންވެފައެފެ. އަދި ވަރަށް އުފާވެސް ވެފައެވެ I am impressed. There has never&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p class="align-right">އެޑިޓަރަށް, ވެދުން ސަލާމަށްފަހު ލިޔަމެވެ. އަހަރުގެ އަދި ކްލާހުގެ އެންމެ ފަހުދުވަސްތަށް ގުނަމުން އަންނަ އިރު އަހުރެން މިހުރީ ހައިރާންވެފައެފެ. އަދި ވަރަށް އުފާވެސް ވެފައެވެ</p>
+<p> </p>
+<p>I am impressed. There has never been a time more exciting for my class. The last few months at Brightway International school Grade-10 have been a blur. Cramming for exams, going to the World Scholars Cup, and winning our first-ever National basketball trophy for the class. This has been and will always be the year of achievements and heartbreak. Let me tell you why it's going to be difficult for us, a few students who are going to sit the Cambridge exams this year. </p>
+<p>There has never been, in my opinion, a good support system for schools here in the Maldives, where students can voice their concerns and get an emotional ear. In our school in recent years (and this is right after Covid), students and teachers have been leaving classes, and school - for reasons that baffle me. I know that private education is very expensive and I am thankful that I was able to continue classes at home, even when all schools were closed due to Covid. And although we were able to continue where we left off in terms of the syllabus, I have had to cram so much in my spare time that I hardly have time to have a proper night's sleep. There are stories of students fainting and missing classes due to anxiety and depression, and this dear Editor just from what I have heard in junior classes.</p>
+<p>to be continued ...</p>
+<p> </p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+</feed>
