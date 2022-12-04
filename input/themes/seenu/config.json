@@ -5,7 +5,7 @@
     "renderer": {
         "relatedPostsNumber": 3,
         "renderRelatedPosts": true,
-        "renderSimilarPosts": false,
+        "renderSimilarPosts": true,
         "renderPrevNextPosts": true,
         "createContentStructure": true,
         "includeFeaturedInPosts": true,

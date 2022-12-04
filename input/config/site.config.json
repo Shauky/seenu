@@ -152,7 +152,7 @@
         },
         "relatedPostsOrder": "default",
         "relatedPostsCriteria": "titles-and-tags",
-        "relatedPostsIncludeAllPosts": true,
+        "relatedPostsIncludeAllPosts": false,
         "editors": {
             "wysiwygAdditionalValidElements": "",
             "codemirrorTabSize": 4,

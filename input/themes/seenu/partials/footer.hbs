@@ -1,16 +1,20 @@
 <footer>
-
+   <section class="align-left float-left font-light">
    {{! checks if any menu is assigned to the Footer menu position }}
    {{#if menus.footerMenu}}
       {{> menu menus.footerMenu}}
    {{/if}}
    {{! /checks if any menu is assigned to the Footer menu position }}
-   
+   </section>
+   <section class="float-right"> <i class="fa fa-twitter ml-2"></i> <i class="fa fa-facebook ml-2"></i> <i class="fa fa-youtube-play ml-2"></i></section>
+   <section class="font-light space-x-2"> <small class="justify-center"> © 2022</small> <small> Careers </small> <small> Privacy </small> <small> Terms&Conditions </small><small> About </small> </section> 
 </footer>
 
 <script async src="{{js "scripts.js"}}"></script>
-<script   src="https://code.jquery.com/jquery-3.6.1.slim.min.js"   integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="   crossorigin="anonymous"></script>
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script   src="https://code.jquery.com/jquery-3.6.1.slim.min.js"   
+integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="   crossorigin="anonymous"></script>
 </body>
 </html>

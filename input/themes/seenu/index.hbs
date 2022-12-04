@@ -3,30 +3,36 @@
 {{> navbar}}
 <main>
    {{! hero class="hero" }}
-  <div class="hero flex justify-between">
-
+    <div class="hero flex justify-between">
     {{! carousel content based on carousel feature tag}}
-   <div class="pr-6 pt-24">
-    <p class="bitfont text-4xl break-words"> Write to your legislator, about your concerns on the state of schools</p>
-    <p class="prose lg:prose-xl bitfont text-2xl" x-data="{ message: 'I ❤️ the fact that we can run Alpine here,' }" x-text="message">      
-    </p>
-    <p class="text-lg font-extralight">but some things at school does concern me</p>
- 
-        {{! loop through hero post feature to get one author only }}
-            {{#author}}
-                {{name}}
-            {{/author}}  
+        <div class="pr-6 pt-24">
+            <p class="bitfont text-4xl break-words"> Write to your legislator, about your concerns on the state of schools</p>
+            <p class="prose lg:prose-xl bitfont text-2xl" x-data="{ message: 'I ❤️ the fact that we can talk about issues here,' }" x-text="message">      
+            </p>
+            <p class="text-lg font-extralight">but sometimes we need action. What should I do?</p>
+            <div class="ui-message"> 
+                <span class="ui-close">X</span>
+                <small>Letter writing gets your issues across to people who matter. Explore this venue with the resources 
+                available to you, to help you write the best letter today.</small>
+            </div>
+        
+                {{! loop through hero post feature to get one author only }}
+                    {{#author}}
+                        {{name}}
+                    {{/author}}  
+        </div>
+        <figure>
+            <img src="./assets/images/donofeat.jpeg" width="720px">
+        </figure>
+    {{! hero}}
     </div>
-    <figure>
-        <img src="./assets/images/donofeat.jpeg" width="720px">
-    </figure>
-  </div>
-  <div class="container columns-2 py-24"> 
-
+    <div class="bleededge">
+    <div class="container columns-2 py-6 midfeat p-2"> 
     {{! loop that generates a list of posts }}
+     {{! featuredPosts only}}
     {{#each featuredPosts}}
-            <article class="my-24 p-4" >
-                {{! featured image }}
+            <article class="my-8 mx-6 p-4 w-5/6" >
+            {{! featured image }}
                 {{#featuredImage}}
                     {{! checks if an image exists }}
                     {{#if url}}
@@ -51,14 +57,13 @@
                                     </figcaption>                      
                                 {{/checkIfAny}}
                                 {{! /checks if a caption and credits exist  }}
-
                         </figure>
                     {{/if}}
                     {{! /checks if an image exists }}
                 {{/featuredImage}}
-                {{! /featured image }}
+            {{! /featured image }}
 
-                {{! post title }}
+            {{! post title }}
                  <h2 class="text-2xl mt-4 font-bold bitfont">
                     <a href="{{url}}">{{title}}</a> 
                 </h2>
@@ -74,60 +79,60 @@
 
                 {{! post excerpt - the Custom excerpt is generated when the Read More button is used when editing a post }}
                 <article class="flex justify-between">
-                {{#if hasCustomExcerpt}}
-                    {{{ excerpt }}}
-                {{else}}
-                    <p class="divide-y-0">{{{ excerpt }}} </p> 
-                {{/if}}
-                 
+                    {{#if hasCustomExcerpt}}
+                        {{{ excerpt }}}
+                    {{else}}
+                        <p class="divide-y-0">{{{ excerpt }}} </p> 
+                    {{/if}}
                 </article>
                 {{! /post excerpt }}
-
-                {{! post author }}
+            </article>
+            {{! post author }}
                 {{#author}}
-                <section class="flex space-x-4 my-4">
+                <section class="flex mx-10 space-x-4 w-5/6">
                     <div class="my-4">
-                    <img 
-                        src="{{avatarImage.url}}" 
-                        {{lazyload "lazy"}} 
-                        alt="{{avatarImage.alt}}" 
-                        {{!-- height="{{avatarImage.height}}"  
-                        width="{{avatarImage.width}}" --}}
-                        width="60px"
-                        height="20px"
-                        class="rounded-full"
-                        >
+                        <img 
+                            src="{{avatarImage.url}}" 
+                            {{lazyload "lazy"}} 
+                            alt="{{avatarImage.alt}}" 
+                            {{!-- height="{{avatarImage.height}}"  
+                            width="{{avatarImage.width}}" --}}
+                            width="60px"
+                            height="20px"
+                            class="rounded-full"
+                            >
                     </div>
                     <div>
-                    <a href="{{url}}">{{name}}</a>
+                   {{!author name}}
+                        <small><a href="{{url}}" class="font-light">{{name}}</a>
                         {{/author}}
-                    {{! /post author }}   
+                        {{! /post author }}   
 
-                    {{! main tag - if no main tag is selected, then the first tag in the list of all tags will be used }}
-                    {{#if mainTag}}
-                        <a href="{{mainTag.url}}">{{mainTag.name}}</a>
-                    {{/if}}
-                    {{! /main tag }}
-                    <br>
-                    <small>The author has an excerpt here. Something interesting to say maybe</small> </div>
-                    <article class="border-x w-1/3"><i class="fa fa-bookmark-o ml-2"></i> <small class="ml-2"><a>READ LATER</a></small></article>
+                        {{! main tag - if no main tag is selected, then the first tag in the list of all tags will be used }}
+                        {{#if mainTag}}
+                            <a href="{{mainTag.url}}">{{mainTag.name}}</a>
+                        {{/if}}
+                        </small>
+                        {{! /main tag }}
+                        <br>
+                        <small><p>The author has an excerpt here. Something interesting to say maybe</p></small>
+                    </div>
+                    <article class="border-x w-1/3">
+                        <i class="fa fa-bookmark-o ml-2"></i> <small class="ml-2"><a>READ LATER</a></small>
+                    </article>
                 </section>
-            </article>
     {{/each}}
-
+    {{! end featuredPosts}}
     {{#each posts}}
         <br>
-        <article class="">
-               <h3 class="my-8 font-bold bitfont">
+        <article class="w-80">
+            {{! unless main tag - if no main tag is selected, then the first tag in the list of all tags will be used }}
+            {{#unless mainTag}}
+                {{#unless additionalData}}
+                <h3 class="my-8 font-bold bitfont">
                     <a href="{{url}}">{{title}}</a>
-              </h3>
-
-                {{! main tag - if no main tag is selected, then the first tag in the list of all tags will be used }}
-                {{#if mainTag}}
-                    <a href="{{mainTag.url}}">{{mainTag.name}}</a>
-                {{/if}}
-                {{! /main tag }}
-
+                </h3>
+                <a href="{{mainTag.url}}">{{mainTag.name}}</a>
                 {{! post excerpt - the Custom excerpt is generated when the Read More button is used when editing a post }}
                 {{#if hasCustomExcerpt}}
                     {{{ excerpt }}}
@@ -138,26 +143,128 @@
                 {{#author}}
                 <div class="flex space-x-0.5 my-4 ">
                     <small class="ml-2 w-1/2"> 
-                     <time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}">
+                        <a href="{{url}}">{{name}}</a><br>
+                        <time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}">
                         {{date createdAt}}
-                    </time>
-                    <a href="{{url}}">{{name}}</a></small> <p class="border-x"><small><i class="fa fa-bookmark-o "> </i> READ LATER</small></p>
-                     {{! post creation date }}
-                
+                        </time>
+                        </small>
+                        <p class="border-x"><small><i class="fa fa-bookmark-o "> </i> READ LATER</small></p>
+                        {{! post creation date }}
                 {{! /post creation date }}
                 </div>
                 {{/author}}
+                {{/unless}}
+            {{/unless}}
+            {{! /main tag }}
         </article>
     {{/each}}
     {{! /loop that generates list of posts }}
-  </div>
-  <hr>
+    </div>
+    </div>
+    {{!main feature div section ends here}}
+    {{! bleed edge}}
     
-</main>
+    {{! newsletter section}}
+    <div class="container p-6">
+        <article class="flex justify-content">
+            <img src="./assets/images/map.svg" width="36px" height="31px" class="mr-6   ">
+             <div class="mr-2">
+                <h1 class="bitfont text-2xl"> Subscribe to Seenu</h1>
+                <p class="bitfont font-extralight"> Get the latest Seenu edition news updates and more delivered to your inbox.</p>
+             </div>
+             <div style="width:600px;">
+                <input id="email" min="1" max="28" type="email" placeholder="e-mail address" class="border-gray-300 no-outline font-light" required>
+                <input id="submit" type="submit" class="button">
+                <section>
+                    <input type="checkbox" class="checked:bg-blue-500">
+                    <small class="font-light"> I agree to receive information and commercial offers about Seenu, eg. updates, new themes...</small>
+                </section>
+             </div>
+        </article>
+    </div>
+    {{!newsletter ends}}
+    <hr class="-mx-24 mt-24 my-8">
+    {{! photo categories}}
+    <h3 class="bitfont"> Latest </h3>
+    <wrapper class="flex flex-row w-1/2">
+    {{#each posts}}
+        <br>
+        <article class="flex flex-col mx-2 my-8 mr-2">
+        {{#if mainTag}}
+            {{#featuredImage}}
+                {{#if url}}
+                    <figure>
+                        <img
+                            src="{{url}}"
+                            {{! checks if the Responsive Images option (located in Site Settings -> Website Speed) is enabled  }}
+                            {{#if @config.site.responsiveImages}}
+                                {{responsiveImageAttributes 'featuredImage' srcset sizes}}
+                            {{/if}}
+                            {{! generates a native loading attribute; if the Media Lazy Load option (located in Site Settings -> Website Speed) is disabled, the loading attribute is not generated  }}
+                            {{lazyload "lazy"}}
+                            alt="{{alt}}" class="h-48 w-96">
+                    </figure>
+                {{/if}}
+            {{/featuredImage}}
+            {{!small feature titles}}
+            <h3 class="my-2 font-bold bitfont flex-column">
+              <a href="{{url}}">{{title}}</a>
+            </h3>
+            {{!author name}}
+            {{#author}}
+            <article class="flex flex-row">
+                <small><a href="{{url}}" class="font-light">{{name}}</a>
+                        <br>
+                        <time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}">
+                            {{date createdAt}}
+                        </time></small>
+                    {{! /post creation date }}
+                    <i class="fa fa-bookmark-o ml-2"></i> <small class="ml-2"><a>READ LATER</a></small>
+            </article>
+            {{/author}}
+        {{/if}}
+        </article>
+     {{/each}}
+     </wrapper>
 
+    {{! end photo categories}}
+
+    {{!begin gallery}}
+    <hr class="-mx-24 mt-24 my-8">
+    {{! photo categories}}
+    <h3 class="bitfont my-8 content-center"> Photo news </h3>
+    <wrapper class="flex flex-row w-full>
+    {{#each posts}}
+    <br>
+    <article class="flex flex-col">
+        {{#if mainTag}}
+            {{#featuredImage}}
+                {{#if url}}
+                <figure>
+                    <img
+                        src="{{url}}"
+                        {{! checks if the Responsive Images option (located in Site Settings -> Website Speed) is enabled  }}
+                        {{#if @config.site.responsiveImages}}
+                            {{responsiveImageAttributes 'featuredImage' srcset sizes}}
+                        {{/if}}
+                        {{! generates a native loading attribute; if the Media Lazy Load option (located in Site Settings -> Website Speed) is disabled, the loading attribute is not generated  }}
+                        {{lazyload "lazy"}}
+                        alt="{{alt}}" class="h-56 w-80">
+                </figure>
+                {{/if}}
+            {{/featuredImage}}
+        {{/if}}
+    </article>
+    {{/each}}
+    {{!end gallery}}
+</main>
 {{!-- <aside>
     {{> sidebar}}
 </aside> --}}
+
+{{!begin home footer}}
+
+
 
 {{> pagination}}
 {{> footer}}

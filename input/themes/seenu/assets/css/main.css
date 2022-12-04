@@ -5,9 +5,92 @@
   Therefore, attach only the style.css file to the head section.
 */
 
+@tailwind base; /* Preflight will be injected here */
+@tailwind components;
+@tailwind utilities;
+
+
 /*** Layout ***/
 h1, .bitfont {
    font-family: 'Bitter', sans-serif;
+}
+
+.bleededge{
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: rgb(244, 241, 229);
+}
+
+.midfeat {
+   margin-left: 5vw;
+   left:100%;
+   background-color: rgb(244, 241, 229);
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+   background-color: black;
+   border: none;
+   color: white;
+   padding: 6px 32px;
+   text-decoration: none;
+   margin: 4px 2px;
+   cursor: pointer;
+ }
+
+ .highlight {
+   background-color: #ccc;
+   color: lightslategray;
+   margin: 0.5em 0;
+   padding: 0.5em;
+}
+
+.rightlines{
+   text-align: right;
+}
+
+
+input[type=checkbox], input[type=radio] {
+   width: 18px;
+   height: 18px;
+   margin-top: 10px;
+}
+
+input, input:focus,
+input:active {
+   outline:none !important;
+   border-width: 0 0 1px 0;
+}
+
+.ui-close{
+   background-color: gray;
+   color: black;
+   position: relative;
+   top:0;
+   right:0;
+   padding: 1px 6px;
+   cursor: pointer;
+   float: right !important;
+}
+
+.ui-close:hover{
+   background-color: beige;
+   color: white;
+}
+
+.no-outline {
+   width: 300px;
+   padding: 10px;
+   border-width: 0 0 1px 0;
+   outline:none !important;
+}
+
+.no-outline:focus{
+   width: 300px;
+   outline:none !important;
 }
 
 #logo {

@@ -16,5 +16,23 @@
                 "items": []
             }
         ]
+    },
+    {
+        "name": "Footer",
+        "position": "footerMenu",
+        "items": [
+            {
+                "id": 1670109500572,
+                "label": "Seenu",
+                "title": "",
+                "type": "internal",
+                "target": "_self",
+                "rel": "footer",
+                "link": "#footer",
+                "cssClass": "footer",
+                "isHidden": false,
+                "items": []
+            }
+        ]
     }
 ]

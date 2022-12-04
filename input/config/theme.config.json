@@ -2,7 +2,7 @@
     "config": {
         "postsPerPage": 12,
         "tagsPostsPerPage": 12,
-        "authorsPostsPerPage": 12,
+        "authorsPostsPerPage": "3",
         "excerptLength": 25,
         "logo": "media/website/clipseenu-3.png"
     },
@@ -18,7 +18,7 @@
         "faviconExtension": "image/x-icon"
     },
     "postConfig": {
-        "displayAuthorBio": 1
+        "displayAuthorBio": "0"
     },
     "defaultTemplates": {
         "post": ""
