@@ -5,7 +5,7 @@
 {{! /check if this is a first menu lavel }}
 
       {{! check if a submenu exists, then display .submenu class with number of nested menu levels; if the submenu does not exist, display the .menu class  }}
-      <ul{{#if level}} class="submenu level-{{level}}" aria-hidden="true" {{else}} class="menu"{{/if}}>
+      <ul{{#if level}} class="submenu level-{{level}}" aria-hidden="true" {{else}} class="menu flex flex-row mr-6 space-x-2"{{/if}}>
 
          {{! loop generating a list of menu items}}
          {{#each items}}

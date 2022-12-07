@@ -310,5 +310,9 @@
                 }
             }
         }
-    }
+    },
+    "postTemplates": {
+        "TEMPLATE_SLUG": "campaigns",
+        "FEATURE_MAILS" : "feature mails"
+     }
 }

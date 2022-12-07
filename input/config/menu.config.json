@@ -14,6 +14,18 @@
                 "cssClass": "iss",
                 "isHidden": false,
                 "items": []
+            },
+            {
+                "id": 1670250391041,
+                "label": "Campaigns",
+                "title": "campaigns",
+                "type": "post",
+                "target": "_self",
+                "rel": "campaigns",
+                "link": 5,
+                "cssClass": "",
+                "isHidden": false,
+                "items": []
             }
         ]
     },
