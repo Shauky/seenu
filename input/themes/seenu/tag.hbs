@@ -1,6 +1,56 @@
 {{! Tag page; this file renders a tag page containing a list of the latest posts }}
 {{> head}}
 {{> navbar}}
+<style type="text/css">
+  @media only screen and (max-width:480px) {
+        body,
+        table,
+        td,
+        p,
+        a,
+        li,
+        blockquote {
+          -webkit-text-size-adjust: none !important
+        }
+   }
+
+   li section{
+      height: 100vh !important;
+   }
+   
+   li section img,
+   li section h2
+   {
+      display: block;
+      position: absolute;
+      z-index: 0;
+   }
+
+   li section span,
+   li section p {
+      position: relative;
+      z-index: 100;
+      width: 269px;
+      font-size: small;
+      padding: 5px;
+   }
+
+   .taghighlight{
+      background-color: whitesmoke;
+      z-index: 200;
+      width: 269px;
+      position: relative;
+   }
+
+   .marginhead {
+          margin-bottom: 1rem;
+    }
+
+   img{
+      width: 300px !important;
+    }
+
+</style>
 <main>
    
    {{! indicates the tag's context}}
@@ -57,7 +107,7 @@
    {{! loop that generates a list of posts }}
    {{#each posts}}
       <article>
-
+         <section class="latest p-10"> 
          {{! featured image }}
          {{#featuredImage}}
             {{! checks if an image exists }}
@@ -77,7 +127,7 @@
             {{! /checks if an image exists }}
          {{/featuredImage}}
          {{! /featured image }}
-
+         <div class="p-6">
          {{! post title }}
          <h2>
             <a href="{{url}}">{{title}}</a>
@@ -92,12 +142,12 @@
 
          {{! post author }}
          {{#author}}
-            <img  
+            {{!-- <img  
                src="{{avatarImage.url}}" 
                {{lazyload "lazy"}} 
                alt="{{avatarImage.alt}}" 
                height="{{avatarImage.height}}"  
-               width="{{avatarImage.width}}">
+               width="{{avatarImage.width}}"> --}}
             <a href="{{url}}">{{name}}</a>
          {{/author}}
          {{! /post author }}
@@ -116,15 +166,16 @@
             <p>{{{ excerpt }}}</p>
          {{/if}}
          {{! /post excerpt }}
-
+            </div>
+         </section> 
       </article>
    {{/each}}
    {{! /loop that generates a list of posts }}
    
 </main>
-<aside>
+{{!-- <aside>
    {{> sidebar}} 
-</aside>
+</aside> --}}
 
 {{> pagination}}
 {{> footer}}

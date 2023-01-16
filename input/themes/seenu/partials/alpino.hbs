@@ -1,0 +1,218 @@
+{{!-- modal functions --}}
+{{!-- flex-direction: row-reverse; --}}
+
+<style type="text/css">
+:root {
+    --clr-primary-5: #ff03445;
+}
+
+.modal{
+    position: relative;
+}
+
+.modal-btn{
+    color: var(--clr-primary-5);
+}
+
+.modal-btn:hover{
+    background:transparent;
+    color: var(--clr-primary-5);
+}
+
+.modal-overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background: rgba(73,166,233,0.5);
+    display: grid;
+    visibility: hidden;
+    place-items: center;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.open-modal{
+    visibility: visible;
+    z-index: 10;
+}
+
+.placeholders__img-wrap{
+    width: 250px;
+    height: 300px;
+}
+
+button svg{
+    z-index: 9;
+    color:black !important;
+    display: block;
+}
+
+.divbutton{
+    color:red;
+    display:block;
+    width: 20px;
+    height:20px;
+    padding:5px;
+    border-radius: 10px;
+    z-index: -5;
+    background-color: aqua;
+}
+
+.review{
+        width: 100% !important;
+        
+    }
+
+@media only screen and (max-width: 600px) {
+    .review{
+        max-width: 80% !important;
+        display: block;
+        
+    }
+
+    .navigate{
+        width: 80%;
+    }
+}
+
+.project-card{
+    width: 400px;
+}
+
+
+.pro-image{
+    z-index: -8;
+    width: 100px;
+    height: 100px;
+    border: white solid;
+    border-radius: 100px;
+}
+
+.pro-image img{
+    margin-top: -20px;
+    height: 100px;
+    width:100px;
+    border:0.5em solid white;
+    border-radius:100%;
+        -moz-border-radius:100%;
+}
+
+#creator{
+    font-weight: 300;
+    font-size: 1.3em;
+    font-family: Cambria, Cochin, Georgia, serif;
+
+}
+
+.flex-container, .review{
+    margin: 10px;
+    gap: 60px;
+    padding: 10px;
+}
+
+</style>
+
+<div class="p-10">
+    <div x-data="{ count:'.' }">
+        <span x-text="count" class="hidden"></span>
+        {{!-- main container --}}
+        <div> 
+
+            {{!-- Featured wrapper --}}
+            <wrapper class="project-wrapper">
+                    <article class="title px-16 ">
+                        <h2> <strong> Creatives of note</strong></h2>
+                        <div class="underline"></div>
+                    
+                    </article>
+                <div class="flex-container px-16 ml-10 flex">
+                    {{!-- load complete html here from alpine data --}}
+
+                    <section class="container review flex w-2/3 ">
+                         
+                        <div class="project-card px-12">
+                            <div class="underline"></div>
+                            <article>
+                                {{!-- profile image --}}
+                           
+                                <div class="pro-image" style="background: url(./assets/images/profile.png)">
+                                     <div class="divbutton">
+                                        {{!-- slider button --}}
+                                        <button class="button-slider-open js-slider-open" type="button" aria-label="button open slider">
+                                            .
+                                        </button>
+                                </div>
+                                <img src="" id="pro-image" alt="" style="border-radius: 100px%;">
+
+                                </div>
+                                    <h4 id="creator">  </h4>
+                                    <p id="job"> </p>
+                                    <p id="info">  </p>
+                                    
+                                {{!-- buttons --}}
+                                <div class="button-container">
+                                    <button class="prev-button">    
+                                        <i class="fa fa-chevron-left">
+                                        </i>
+                                    </button>
+                                    <button class="next-button">    
+                                        <i class="fa fa-chevron-right">
+                                        </i>
+                                    </button>
+                                </div>
+                                <button class="random-button button-slider-open js-slider-open modal-btn">Details</button>
+                            </article>
+                        </div>
+                        {{!-- Load details data from ... --}}
+                        <div class="article-details mt-10">
+                            <p> Codrops is a great resource </p>
+                            <p> For web design resources that stand out</p>
+                        </div> 
+                    </section>
+
+                    {{!-- common modal slider, and for all projects --}}
+                    <div class="modal float-right hidden">
+                        <div class="placeholders js-placeholders">
+                            <div class="placeholders__img-wrap js-img-wrap" style="--aspect-ratio: 0.8;">
+                                <img
+                                src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80&ar=0.8"
+                                class="placeholders__img"
+                                ></div>
+                        </div>
+                    </div>
+
+                    {{!-- modal overlay --}}
+                    <div class="modal-overlay">
+                        <div class="modal-content">
+                            <h3> Modal Content</h3>
+                            <button class="close-btn">
+                                <i class="fa fa-times"></i>
+                                close
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div></div>
+                </div>
+            </wrapper>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    const modalBtn = document.querySelector(".modal-btn");
+    const modal = document.querySelector(".modal-overlay");
+    const closeBtn = document.querySelector(".close-btn");
+
+    modalBtn.addEventListener("click", function(){
+        modal.classList.add("open-modal");
+
+    });
+
+    closeBtn.addEventListener("click", function(){
+        modal.classList.remove("open-modal");
+    });
+
+</script>

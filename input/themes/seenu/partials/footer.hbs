@@ -1,4 +1,11 @@
 <footer>
+   {{!end gallery}}
+ 
+   <br>  
+   <input id="slides" type="range" min="1" max="100" class="slides">
+
+   <p> <small> Editors Archive </small></p>
+
    <section class="align-left float-left font-light">
    {{! checks if any menu is assigned to the Footer menu position }}
    {{#if menus.footerMenu}}
@@ -6,15 +13,39 @@
    {{/if}}
    {{! /checks if any menu is assigned to the Footer menu position }}
    </section>
+   
    <section class="float-right"> <i class="fa fa-twitter ml-2"></i> <i class="fa fa-facebook ml-2"></i> <i class="fa fa-youtube-play ml-2"></i></section>
-   <section class="font-light space-x-2"> <small class="justify-center"> © 2022</small> <small> Careers </small> <small> Privacy </small> <small> Terms&Conditions </small><small> About </small> </section> 
+   <section class="font-light space-x-2"> <small class="justify-center"> © 2022</small> <small> Careers </small> <small> Privacy </small> <small> Terms&Conditions </small><small> About </small> <small> Books </small></section> 
 </footer>
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-<script async src="{{js "scripts.js"}}"></script>
+   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+   <script src="https://cdn.tailwindcss.com"></script>
 
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-<script src="https://cdn.tailwindcss.com"></script>
-<script   src="https://code.jquery.com/jquery-3.6.1.slim.min.js"   
-integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="   crossorigin="anonymous"></script>
+
+   {{!-- greensock --}}
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+   {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Observer.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Draggable.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/EaselPlugin.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/MotionPathPlugin.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/PixiPlugin.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/EasePack.min.js"></script> --}}
+
+   {{!-- react --}}
+
+   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+   {{!-- main script file --}}
+   <script src="{{js "scripts.js"}}"></script>
+   <script async src="{{js "reactif.js"}}"></script>
+
 </body>
 </html>

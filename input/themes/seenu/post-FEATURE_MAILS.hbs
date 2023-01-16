@@ -3,12 +3,19 @@
 <main>
     <article>
     {{#post}}
-      <div id="post-entry" class="my-16 p-4">
-          <h1 class="bitfont text-2xl">Some features just look good</h1>
+      <div id="post-entry" class="my-12 mx-26 px-24 w-3/4">
+          <h3 class="bitfont text-2xl">Some projects are just good</h3>     
          {{{text}}}
       </div>
     {{/post}}
     </article>
+    <small class="p-4 px-24">No framework, basic(ish), JavaScript & CSS design</small>
+
+{{> alpino}}
+    <section>     
+      {{> questions}}
+   </section>
 </main>
 
+{{> pagination}}
 {{> footer}}

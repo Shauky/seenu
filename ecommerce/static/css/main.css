@@ -1,0 +1,14 @@
+
+body{
+    padding: 4em;
+    background-color: whitesmoke;
+}
+
+.productside{
+    height: 100vh !important;
+}
+
+.phoneimage img{
+    width: 50px;
+    max-width: 20% !important;
+}

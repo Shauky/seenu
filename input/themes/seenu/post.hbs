@@ -1,7 +1,6 @@
 {{! Post page; this file renders a single post and loads all the content}}
 {{> head}}
 {{> navbar}}
-
 <main>
    <article>
    {{! injects code via a Custom HTML tool - as defined in the config.json file in the "renderer" section }}
@@ -16,7 +15,7 @@
       <section class="w-full">
          <span class="w-1/2">      
             {{! post title }}
-            <h1 class="float-right ml-4 my-8 text-4xl leading-loose">
+            <h1 class="float-right ml-4 my-8 text-4xl leading-loose px-14">
              {{title}}
             </h1>
             
@@ -61,43 +60,38 @@
             {{! /check if an image exists }}
          {{/featuredImage}}
          {{! /featured image }}
-         <br>
-               
-         {{! post creation date }}
-         <time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}" class="font-light uppercase float-right mx-2 mb-2">
-            <small>
-            {{date createdAt}}
-            </small>
-         </time>
-         <br>
-         
       </section>
+      <section class="p-4 ml-2">
       {{! post author }}
-      <span class="w-1/2 mx-8">
-         <small class="space-x-4">
-            <br>
-            {{!-- {{ translate 'post.publishedBy' }} --}}
-            {{#author}}
-               <a href="{{url}}" rel="author" title="{{name}}" class="float-right mx-8">{{name}}</a>
-            {{/author}}
-                           {{! main tag - if not selected, the first tag in the list of all tags will be displayed }}
-            {{#if mainTag}}
-               <a href="{{ mainTag.url }}" class="post__maintag float-right mx-8">
-                  {{mainTag.name }}
-               </a>
-            {{/if}}
-            {{! /main tag }}
-      </span>
+         <span class="w-1/2 mx-10">
+               <small class="space-x-6">
+                   {{! post creation date }}
+                  <time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}" class="font-light uppercase float-left px-2 mb-2">
+                     {{date createdAt}}
+                  </time>
+                  {{!-- {{ translate 'post.publishedBy' }} --}}
+                  {{#author}}
+                     <a href="{{url}}" rel="author" title="{{name}}" class="float-left mx-8">{{name}}</a>
+                  {{/author}}
+                  </small>
+                              {{! main tag - if not selected, the first tag in the list of all tags will be displayed }}
+                  {{#if mainTag}}
+                  <small><a href="{{ mainTag.url }}" class="post__maintag float-lef">
+                     {{mainTag.name }}
+                  </a>
+                  </small>
+               {{/if}}
+               {{! /main tag }}
+         </span>
       {{! /post author }}
-      
-      <br>
+      </section>
 
       <container>   
       
       {{! post body }}
       <br>
       
-      <div id="post-entry" class="my-16 p-4">
+      <div id="post-entry" class="my-12 mx-26 p-12 font-serif">
          {{{text}}}
       </div>
       {{! /post body }}
@@ -205,7 +199,9 @@
       {{! /check if there is any related post }}
       {{! /related posts }}
    </article>
-   {{/post}}
+   <div class="columns-2xs">
+      {{/post}}
+   </div>
    {{! /indicates the post's context}}
    {{! code injection by a Custom HTML tool - defined in config.json file in the renderer section}}
    {{#if @customHTML.afterPost}}
@@ -215,8 +211,8 @@
    {{/if}}
    {{! injects code via a Custom HTML tool }}
 </main>
+{{> footer}}
+
 {{!-- <aside>
    {{> sidebar}}
 </aside> --}}
-
-{{> footer}}

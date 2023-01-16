@@ -1,2 +1,17 @@
 compute/
+env/
 .DS_Store
+input/themes/seenu/node_modules
+input/themes/seenu/package.json
+input/themes/seenu/package-lock.json
+node_modules/
+package.json
+package-lock.json
+preview/
+output/
+input/media
+input/root-files
+input/languages
+sitemock/
+input/db.sqlite
+.gitignore

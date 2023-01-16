@@ -2,7 +2,6 @@
 {{> head}}
 {{> navbar}}
 <main>
-   
    {{! indicates the author's context }}
    {{#author}}
 
@@ -11,7 +10,7 @@
          {{! checks if an image exists }}
          {{#if url}}
             <figure>
-               <img
+               {{!-- <img
                   src="{{url}}"
                   {{! checks if the Responsive Images option (located in Site Settings -> Website Speed) is enabled  }}
                   {{#if @config.site.responsiveImages}}
@@ -21,7 +20,7 @@
                   {{lazyload "lazy"}}
                   height="{{height}}"
                   width="{{width}}"
-                  alt="{{alt}}">
+                  alt="{{alt}}"> --}}
 
                   {{! checks if a caption and credits exist  }}
                   {{#checkIfAny caption credits}}
@@ -40,12 +39,12 @@
 
       {{! check if an author avatar exists }}
       {{#if avatar}}
-         <img 
+         {{!-- <img 
             src="{{avatarImage.url}}" 
             {{ lazyload "eager" }} 
             alt="{{avatarImage.alt}}" 
             height="{{avatarImage.height}}" 
-            width="{{avatarImage.width}}">
+            width="{{avatarImage.width}}"> --}}
       {{/if}}
       {{! /check if an author avatar exists }}
 
@@ -78,7 +77,7 @@
 
    {{! loop that generates a list of posts }}
    {{#each posts}}
-      <article>
+      <article class="p-10 px-18">
 
          {{! featured image }}
          {{#featuredImage}}
@@ -114,13 +113,13 @@
 
          {{! post author }}
          {{#author}}
-            <img  
+            {{!-- <img  
                src="{{avatarImage.url}}" 
                {{lazyload "lazy"}} 
                alt="{{avatarImage.alt}}" 
                height="{{avatarImage.height}}"  
                width="{{avatarImage.width}}">
-            <a href="{{url}}">{{name}}</a>
+            <a href="{{url}}">{{name}}</a> --}}
          {{/author}}
          {{! /post author }}
 
@@ -135,7 +134,7 @@
          {{#if hasCustomExcerpt}}
             {{{ excerpt }}}
          {{else}}
-            <p>{{{ excerpt }}}</p>
+            <p class="px-10">{{{ excerpt }}}</p>
          {{/if}}
          {{! /post excerpt }}
 
@@ -144,9 +143,9 @@
    {{! /loop that generates a list of posts }}
    
 </main>
-<aside>
+{{!-- <aside>
    {{> sidebar}}
-</aside>
+</aside> --}}
 
-{{> pagination}}
+{{!-- {{> pagination}} --}}
 {{> footer}}

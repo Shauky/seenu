@@ -1,0 +1,68 @@
+{{!-- A json API with a list of questions --}}
+<style type="text/css">
+.hide{
+    visibility: hidden;
+    height: 0;
+}
+
+.show{
+    visibility: visible;
+    height: 56px;
+    padding-bottom: 3px;
+    transition: 0s;
+    margin-bottom: 2px;
+}
+
+
+
+</style>
+
+<script type="text/javascript">
+var data = [
+{question: "What is Seenu?", answer: "Seenu is a play on the word 'Scene' and also the letter 'S' in Dhivehi, the language of the Maldives.", active: "true"},
+{question: "What do you write about?", answer:"We believe that the web is an art form, and as such we explore different web design and development trends", active:"true"},
+{question: "What are campaigns, and, do you teach web design?", answer:"We are foremost a design and development service and we like to showcase our work. Clients approach us with special causes and we try to help as much as we can. Yes, we believe that web design should be taught. And as such we try to document and teach the design process as much as we can.", active:"true"},
+{question: "Do you do pro-bono work?", answer:"Web design is a taxing process and takes a lot of time and effort. But we do work on 'Causes', and designs for social good. If you have a project that you need help with, reach out to us.", active:"true"},
+{question: "How can I contribute?", answer:"Buy us a coffee or head over to the store and buy a t-shirt to help the website. If you are a seasoned designer/ programmer and would like to contribute your work (for a price), come meet us. ", active:"true"},
+]
+
+window.onload = function() {
+    const question = document.getElementById("q-race")
+    
+    for (const i of data) {
+        question.innerHTML += '<p id="question" class="pt-4">Question: ' + i.question + '</p><button type="button" class="q-btn"><span class="plus-icon"><i class="fa fa-plus-circle"></i></span></button>'
+       + '<p id="answer" class="hide">Answer: ' + i.answer + '</p>'
+        console.log("okay")
+    }
+
+    const btns = document.querySelectorAll('.q-btn')
+
+    btns.forEach(function(btn){
+        btn.addEventListener('click', function(e){
+        var item = e.currentTarget.nextSibling
+        item.classList.toggle('show')
+        document.querySelectorAll('answer').classList.add('slide-down')
+        // a query selector works here
+        if(!currentTarget){
+            item.classList.remove('show')
+        }
+        })
+    })
+}
+
+</script>
+
+<section class="questions pt-12 px-20">
+    <hr>
+    <br>
+    <div class="title">
+        <h1> What is Seenu</h1><button type="button" class="q-btn"><span class="plus-icon"><i class="fa fa-plus-circle"></i></span></button>
+    </div>
+    {{!-- questions --}}
+    <div class="center">
+        <div id="q-race">
+            
+        </div>
+    </div>
+</section>
+<br>

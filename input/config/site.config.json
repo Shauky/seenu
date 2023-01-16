@@ -7,18 +7,18 @@
         "color": 1,
         "icon": "web-pizza"
     },
-    "domain": "",
+    "domain": "http://",
     "language": "en-gb",
     "spellchecking": false,
     "advanced": {
         "cssCompression": 1,
         "htmlCompression": 1,
         "htmlCompressionRemoveComments": 1,
-        "imagesQuality": 60,
+        "imagesQuality": "30",
         "alphaQuality": 100,
         "forceWebp": false,
         "webpLossless": false,
-        "responsiveImages": 1,
+        "responsiveImages": true,
         "mediaLazyLoad": 1,
         "versionSuffix": 1,
         "sitemapEnabled": 1,
@@ -34,31 +34,31 @@
         "twitterCardsEnabled": 1,
         "twitterCardsType": "summary",
         "twitterUsername": "",
-        "metaTitle": "Maldives bilingual literary review %sitename",
-        "metaDescription": "A literary discourse on politics, history and culture in Maldives.",
+        "metaTitle": "A bilingual design & tech literature review %sitename",
+        "metaDescription": "literary discourse on technology and art",
         "noIndexThisPage": false,
         "homepageNoIndexPagination": false,
         "metaRobotsIndex": "index, follow",
         "postMetaTitle": "%posttitle - %sitename ",
-        "postMetaDescription": "Seenu is your source for great content from Maldives",
+        "postMetaDescription": "Seenu is your source for great tech, art and literature ",
         "postUseTextWithoutCustomExcerpt": false,
         "tagMetaTitle": "Tag: %tagname - %sitename",
-        "tagMetaDescription": "Seenu is your source for great content from Maldives",
+        "tagMetaDescription": "Seenu is your source for great tech, art and literature ",
         "tagNoIndexPagination": false,
         "tagNoPagination": false,
         "metaRobotsTags": "noindex, follow",
         "tagsMetaTitle": "All tags - %sitename",
-        "tagsMetaDescription": "Seenu is your source for great content from Maldives",
+        "tagsMetaDescription": "Seenu is your source for great tech, art and literature ",
         "metaRobotsTagsList": "noindex, follow",
         "authorMetaTitle": "Author: %authorname - %sitename",
-        "authorMetaDescription": "Seenu is your source for great content from Maldives",
+        "authorMetaDescription": "Seenu is your source for great tech, art and literature ",
         "metaRobotsAuthors": "noindex, follow",
         "authorNoIndexPagination": false,
         "authorNoPagination": false,
         "displayEmptyAuthors": false,
         "displayEmptyTags": false,
         "errorMetaTitle": "Error 404 - %sitename",
-        "errorMetaDescription": "Seenu is your source for great content from Maldives",
+        "errorMetaDescription": "Seenu is your source for great tech, art and literature ",
         "metaRobotsError": "noindex, follow",
         "searchMetaTitle": "Search - %sitename",
         "searchMetaDescription": "",
@@ -157,15 +157,22 @@
             "wysiwygAdditionalValidElements": "",
             "codemirrorTabSize": 4,
             "codemirrorAutoIndent": true
+        },
+        "customHTML": {
+            "custom-comments-code": "",
+            "custom-search-input": "",
+            "custom-search-content": "",
+            "beforePost": "",
+            "afterPost": ""
         }
     },
     "deployment": {
-        "protocol": "",
+        "protocol": "manual",
         "relativeUrls": false,
         "port": "",
-        "server": "",
+        "server": "localhost",
         "username": "",
-        "password": "",
+        "password": "publii uuid-1669262737104-861377773",
         "askforpassword": false,
         "rejectUnauthorized": true,
         "path": "",
@@ -175,19 +182,20 @@
             "customProvider": false,
             "provider": "aws",
             "endpoint": "",
-            "id": "",
-            "key": "",
+            "id": "publii-s3-id uuid-1669262737104-861377773",
+            "key": "publii-s3-key uuid-1669262737104-861377773",
             "bucket": "",
             "region": "",
             "prefix": "",
-            "acl": "public-read"
+            "acl": "public-read",
+            "removeFiles": false
         },
         "github": {
             "server": "api.github.com",
             "user": "",
             "repo": "",
             "branch": "",
-            "token": "",
+            "token": "publii-gh-token uuid-1669262737104-861377773",
             "parallelOperations": 1,
             "apiRateLimiting": 1
         },
@@ -195,11 +203,11 @@
             "server": "https://gitlab.com/",
             "repo": "",
             "branch": "",
-            "token": ""
+            "token": "publii-gl-token uuid-1669262737104-861377773"
         },
         "netlify": {
-            "id": "",
-            "token": ""
+            "id": "publii-netlify-id uuid-1669262737104-861377773",
+            "token": "publii-netlify-token uuid-1669262737104-861377773"
         },
         "google": {
             "key": "",
@@ -211,5 +219,5 @@
             "outputDirectory": ""
         }
     },
-    "theme": "seenu"
+    "theme": "editorial-2"
 }

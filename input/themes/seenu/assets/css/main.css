@@ -5,14 +5,55 @@
   Therefore, attach only the style.css file to the head section.
 */
 
-@tailwind base; /* Preflight will be injected here */
+/* Preflight will be injected here */
+
+@tailwind base; 
 @tailwind components;
 @tailwind utilities;
+
+.root-menu{
+   padding: 0;
+   height: 0 !important;
+   margin-top: -100px;
+   z-index: 10px;
+   position:absolute;
+}
+
+
+.latest{
+ display: flex;
+ flex-direction: row;
+}
+
+.hero{
+   display: flex;
+}
+
+.container{
+   columns: 2;
+}
+
+
+@media only screen and (max-width: 600px) {
+.container{
+   columns: unset;
+}
+.hero{
+   display: block;
+}
+
+.latest{
+   display: block;
+  }
+  
+
+
+}
 
 
 /*** Layout ***/
 h1, .bitfont {
-   font-family: 'Bitter', sans-serif;
+   font-family: 'Fugit', sans-serif;
 }
 
 .bleededge{
@@ -103,14 +144,14 @@ body {
    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
    font-size: 1rem;
    font-weight: 400;
-   line-height: 1.6;
+   line-height: 1.2;
    color: #313131;
    display: grid;
    grid-template-columns: auto minmax(auto, var(--main-width)) var(--sidebar-width) auto;
    grid-template-areas: ". header header ."
                         ". main main ."
                         ". footer footer .";
-   grid-gap: 7vw;
+   grid-gap: 4vw;
 }
 
 

@@ -1,0 +1,107 @@
+{{> head }}
+{{!-- drop everything after --}}
+<style>
+        .SN_hr{
+            position: absolute;
+            width: 1160px;
+            height: 1px;
+            left: calc(50% - 1160px/2 + 15.11px);
+            top: 66px;
+
+            background: #000000;
+            }
+
+        .SN_site_InsideScroll{
+            /* Auto layout */
+            display: block;
+            padding: 0px;
+            position: absolute;
+            width: 1160px;
+            height: auto;
+            left: 4%;
+        }
+
+        .SN_site_ContentArea{
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            align-items: space-between;
+            gap: 10px;
+            padding: 0px;
+            position: absolute;
+            width: 1239.86px;
+            height: 3819.09px;
+            left: 30.23px;
+            top: 65px;
+        }
+
+        .SN_site_ContentArea a{
+            width: 1239.86px;
+        }
+        
+         .hero_left {
+            width: 100%;
+            display: inline-block;
+        }
+
+        .hero_left img {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            display: block;
+        }
+
+        .hero_right {
+            display: inline-block;
+            width: 100%;
+            vertical-align: center;
+        }
+</style>
+
+<main>
+    <div id="SN_site" class="SN_site">
+            <div class="SN_site_InsideScroll" style="margin-left: 6%; margin-right: 10%; padding-left: 2%;"> 
+                <div class="SN_site_Header">
+                    {{> top }}
+                </div>
+                <div class="SN_hr"> </div>
+                {{!-- end header --}}
+            </div>
+            <div class="SN_site_ContentArea" style="width:auto;">
+            {{#each featuredPosts}}
+                <a style="display:flex;">
+                    {{#featuredImage}}
+                    <div class="hero_left">
+                        {{#if url}}
+                        <figure>
+                            <img class="feature-img" src="{{url}}"
+                            {{#if @config.site.responsiveImages}}
+                                {{responsiveImageAttributes 'featuredImage' srcset sizes}}
+                            {{/if}}
+                            {{lazyload "lazy"}}
+                            height="{{height}}"
+                            width="{{width}}"
+                            alt="{{alt}}">
+                        </figure>
+                        {{/if}}
+                        {{! /checks if an image exists }}
+                    </div>
+                    {{/featuredImage}}
+                </a>
+                            {{! /featured image }}
+                <div class="hero_right">
+                    <a href="{{url}}">
+                        <h3>{{title}}</h3>
+                    </a>
+                </div>
+            {{/each}}
+            </div>
+    </div>
+</main>
+
+{{!-- end drop before here --}}
+
+{{!begin home footer}}
+
+{{> pagination}}
+{{> footer}}

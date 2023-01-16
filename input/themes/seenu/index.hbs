@@ -1,19 +1,19 @@
 {{! Front page; this file renders a front page with a list of the latest posts }}
 {{> head}}
 {{> navbar}}
+
 <main>
    {{! hero class="hero" }}
-    <div class="hero flex justify-between">
+    <div class="hero justify-between">
     {{! carousel content based on carousel feature tag}}
         <div class="pr-6 pt-24">
-            <p class="bitfont text-4xl break-words"> Write to your legislator, about your concerns on the state of schools</p>
-            <p class="prose lg:prose-xl bitfont text-2xl" x-data="{ message: 'I ❤️ the fact that we can talk about issues here,' }" x-text="message">      
+            <p class="bitfont text-4xl break-words"> We explore and write about the latest design trends.</p>
+            <p class="prose lg:prose-xl bitfont text-2xl" x-data="{ message: 'we ❤️ everything creative' }" x-text="message">      
             </p>
-            <p class="text-lg font-extralight">but sometimes we need action. What should I do?</p>
+            <p class="text-sm font-extralight">And sometimes we share designs, teach and code too.</p>
             <div class="ui-message"> 
                 <span class="ui-close">X</span>
-                <small>Letter writing gets your issues across to people who matter. Explore this venue with the resources 
-                available to you, to help you write the best letter today.</small>
+                <small>Seenu is in beta mode, but you can still sign up, make a profile and save your favorite designs.</small>
             </div>
         
                 {{! loop through hero post feature to get one author only }}
@@ -27,11 +27,11 @@
     {{! hero}}
     </div>
     <div class="bleededge">
-    <div class="container columns-2 py-6 midfeat p-2"> 
+    <div class="container py-6 midfeat p-2"> 
     {{! loop that generates a list of posts }}
      {{! featuredPosts only}}
     {{#each featuredPosts}}
-            <article class="my-8 mx-6 p-4 w-5/6" >
+            <article class="my-8 mx-6 p-4 w-5/6 mx-2 ml-6 pr-12 border-r-2 border-black-600" >
             {{! featured image }}
                 {{#featuredImage}}
                     {{! checks if an image exists }}
@@ -117,7 +117,7 @@
                         <br>
                         <small><p>The author has an excerpt here. Something interesting to say maybe</p></small>
                     </div>
-                    <article class="border-x w-1/3">
+                    <article class="border-l w-1/3">
                         <i class="fa fa-bookmark-o ml-2"></i> <small class="ml-2"><a>READ LATER</a></small>
                     </article>
                 </section>
@@ -125,7 +125,7 @@
     {{! end featuredPosts}}
     {{#each posts}}
         <br>
-        <article class="w-80">
+        <article class="w-2/3">
             {{! unless main tag - if no main tag is selected, then the first tag in the list of all tags will be used }}
             {{#unless mainTag}}
                 {{#unless additionalData}}
@@ -165,20 +165,27 @@
     {{! bleed edge}}
     
     {{! newsletter section}}
-    <div class="container p-6">
+    <div class="p-6">
         <article class="flex justify-content">
             <img src="./assets/images/map.svg" width="36px" height="31px" class="mr-6   ">
-             <div class="mr-2">
+             {{!-- <div class="mr-2">
                 <h1 class="bitfont text-2xl"> Subscribe to Seenu</h1>
                 <p class="bitfont font-extralight"> Get the latest Seenu edition news updates and more delivered to your inbox.</p>
-             </div>
-             <div style="width:600px;">
+             </div> --}}
+             {{!-- <div style="width:600px;">
                 <input id="email" min="1" max="28" type="email" placeholder="e-mail address" class="border-gray-300 no-outline font-light" required>
-                <input id="submit" type="submit" class="button">
-                <section>
+                <input id="submit" type="submit" class="button"> --}}
+
+                {{! form facade forms}}       
+                <div id="ff-compose"></div>
+                <script async defer src="https://formfacade.com/include/106005699372732870395/form/1FAIpQLSfniUbHxMFXWmtb9Q4A7_SonWzX1lRZWvJJLz0ARG20EhYZVQ/classic.js?div=ff-compose"></script>
+                {{! form facade forms}}
+
+                {{!-- <section>
                     <input type="checkbox" class="checked:bg-blue-500">
                     <small class="font-light"> I agree to receive information and commercial offers about Seenu, eg. updates, new themes...</small>
-                </section>
+                </section> --}}
+                
              </div>
         </article>
     </div>
@@ -186,7 +193,7 @@
     <hr class="-mx-24 mt-24 my-8">
     {{! photo categories}}
     <h3 class="bitfont"> Latest </h3>
-    <wrapper class="flex flex-row w-1/2">
+    <wrapper class="latest w-1/2">
     {{#each posts}}
         <br>
         <article class="flex flex-col mx-2 my-8 mr-2">
@@ -233,9 +240,9 @@
     <hr class="-mx-24 mt-24 my-8">
     {{! photo categories}}
     <h3 class="bitfont my-8 content-center"> Photo news </h3>
-    <wrapper class="flex flex-row w-full>
+    <wrapper class="latest w-full>
     {{#each posts}}
-    <br>
+    <br>   
     <article class="flex flex-col">
         {{#if mainTag}}
             {{#featuredImage}}
@@ -256,7 +263,6 @@
         {{/if}}
     </article>
     {{/each}}
-    {{!end gallery}}
 </main>
 {{!-- <aside>
     {{> sidebar}}
@@ -264,7 +270,6 @@
 
 {{!begin home footer}}
 
-
-
 {{> pagination}}
+
 {{> footer}}

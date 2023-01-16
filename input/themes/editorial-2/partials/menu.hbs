@@ -1,0 +1,73 @@
+{{!
+	Theme created by TidyCustoms based on Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 & MIT license (html5up.net/license)
+}}
+<style>
+  #nav ul, #nav ul li{
+      font-family: 'Roboto Condensed';
+      font-size: small;
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: 600;
+      width: 300px;
+      height: 16px;
+      display: flex;
+      align-items: space-between;
+      text-decoration: none;
+      /* Inside auto layout */
+      order: 1;
+      flex-grow: 0;
+   }
+
+   #nav ul li{
+      display: block;
+      width: 100px;
+      text-decoration: none;
+   }
+</style>
+
+
+<ul{{#if level}} class="submenu level-{{level}}" aria-hidden="true"{{/if}}>
+   {{#each items}}
+         <li{{menuItemClasses}}>
+      {{#if link}}
+         <a
+            href="{{menuUrl}}"
+            {{#if title}}
+               title="{{title}}"
+            {{/if}}
+            {{#if target}}
+               target="{{target}}"
+            {{/if}}
+            {{#if rel}}
+               rel="{{rel}}"
+            {{/if}}
+            {{#if items}} 
+               aria-haspopup="true" 
+               class="opener"
+            {{/if}}>
+            {{label}}
+         </a>
+      {{else}}
+         <span            
+            {{#if title}}
+               title="{{title}}"
+            {{/if}} 
+            {{#if items}} 
+               aria-haspopup="true" 
+               class="opener"
+            {{else}}
+               class="is-separator"
+            {{/if}}>
+            {{label}}
+         </span>
+      {{/if}}
+
+      {{#if items}}
+         {{> menu}}
+      {{/if}}
+   </li>
+   {{/each}}
+</ul>
+   

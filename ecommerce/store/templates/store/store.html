@@ -1,0 +1,39 @@
+{% extends 'store/main.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" >
+{% block content %}
+<p> Store </p>
+
+<div class="grid grid-cols-3 gap-2">
+    <div class="productside block">
+        Sidebar
+    </div>
+    <div>
+        {% for product in products %}
+        <div class="rproduct1">
+            <img class="thumbnail" src={{product.imageURL}}>
+            <div class="box-element product">
+                <h6><strong>{{product.name}}</strong></h6>
+                <hr>
+                <ul class="flex">
+                    <li class="flex mr-6">
+                        <button class="btn btn-outline-secondary add-btn update-cart" data-product="{{product.id}}" data-action="add"><img src="{% static 'images/cart.svg' %}" class="-mt-1 ml-2 mr-2">
+                        </button>
+                    </li>
+                    <li class="flex mr-8">
+                        <!-- viewtv -->
+                        <button class="btn btn-outline-secondary add-btn update-cart" data-product="{{product.id}}" data-action="viewtv"><img src="{% static 'images/mirroringscreen.svg' %}" class="-mt-1  ml-2 mr-2"></button>
+                    </li>
+                    <li>
+                        <h4><strong>Rp {{product.price | floatformat:2}}</strong></h4>
+                    </li>
+                </ul>
+            </div>  
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+
+{% endblock %}

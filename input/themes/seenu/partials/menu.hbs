@@ -1,11 +1,12 @@
 {{! check if this is a first menu level }}
 {{#unless level}}
-   <nav class="navbar -mt-6">
+   <nav class="navbar mt-1 text-sm flex">
 {{/unless}}
 {{! /check if this is a first menu lavel }}
 
       {{! check if a submenu exists, then display .submenu class with number of nested menu levels; if the submenu does not exist, display the .menu class  }}
-      <ul{{#if level}} class="submenu level-{{level}}" aria-hidden="true" {{else}} class="menu flex flex-row mr-6 space-x-2"{{/if}}>
+      <ul{{#if level}} class="submenu level-{{level}}" aria-hidden="true" {{else}} class="menu mr-6 space-x-2"{{/if}}> 
+      {{!-- flex flex-row --}}
 
          {{! loop generating a list of menu items}}
          {{#each items}}
@@ -46,21 +47,23 @@
 
             {{else}}
                {{! if the menu item is not a link display a separator }}
-               <span
+            <span
                   {{#if title}}
                      title="{{title}}"
                   {{/if}} 
                   {{#if items}} 
                      aria-haspopup="true"
-                  {{/if}}>
-                  {{label}}
-               </span>
+                  {{/if}} class="menu-btn">
+                     {{label}}
+            </span>
+
                {{! if the menu item is not a link display a separator }}
             {{/if}}
-
             {{! check if the menu item contains a submenu }}
             {{#if items}}
+               <article class="hidden hidden-btn">
                {{> menu}}
+               </article>
             {{/if}}
             {{! check if the menu item contains a submenu }}
 
@@ -72,6 +75,6 @@
 
 {{! check if this is a first menu level }}
 {{#unless level}}
+   <div class="navout">__</div>
    </nav>
 {{/unless}}
-{{! /check if this is a first menu level }}

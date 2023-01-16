@@ -1,22 +1,69 @@
 {{! Tags page; this file renders a page containing a list of all the tags }}
 {{> head}}
 {{> navbar}}
-<main>
+<style type="text/css">
+  @media only screen and (max-width:480px) {
+        body,
+        table,
+        td,
+        p,
+        a,
+        li,
+        blockquote {
+          -webkit-text-size-adjust: none !important
+        }
+   }
+
+   li section{
+      height: 100vh !important;
+   }
    
-   <h1>
-      {{ translate 'tags.tagsPageTitle' }}
-      <sup>({{tagsNumber}})</sup>
-   </h1>
+   li section img,
+   li section h2
+   {
+      display: block;
+      position: absolute;
+      z-index: 0;
+   }
+
+   li section span,
+   li section p {
+      position: relative;
+      z-index: 100;
+      width: 269px;
+      font-size: small;
+      padding: 5px;
+   }
+
+   .taghighlight{
+      background-color: whitesmoke;
+      z-index: 200;
+      width: 269px;
+      position: relative;
+   }
+
+   .marginhead {
+          margin-bottom: 1rem;
+    }
+
+</style>
+
+<main>
+   <section class="marginhead">
+      <h1 class="bitfont text-2xl">Some causes just look good
+         <sup>{{ translate 'tags.tagsPageTitle' }}({{tagsNumber}})</sup>
+      </h1>
+   </section>
 
    <p>
-      {{ translate 'tags.description' }}
+      {{!-- {{ translate 'tags.description' }} --}}
    </p>
 
    <ul>
       {{! loop that generates a list of tags }}
       {{#each tags}}
-         <li>
-
+         <li class="p-4 m-2">
+            <section>
             {{! tag featured image }}
             {{#featuredImage}}
                {{! checks if an image exists }}
@@ -29,39 +76,40 @@
                      {{/if}}
                      {{! generates a native loading attribute; if the Media Lazy Load option (located in Site Settings -> Website Speed) is disabled, the loading attribute is not generated }}
                      {{lazyload "lazy"}}
-                     height="{{height}}"
-                     width="{{width}}"
-                     alt="{{alt}}">
+                     height="298"
+                     width="264"
+                     alt="{{alt}}"
+                     class="mb-1">
                {{/if}}
                {{! /checks if an image exists }}
             {{/featuredImage}}
             {{! /tag featured image }}
+            <article class="detail">
+               {{! tag description }}
+               {{#if description}}
+                  <p>{{description}}</p>                   
+               {{/if}}
+               {{! /tag description }}
 
-            {{! tag name }}
-            <h2>
-               <a href="{{url}}">{{name}}</a>
-            </h2>
-            {{! /tag name }}
+               {{! number of posts in the tag }}
+               <span>{{postsNumber}} {{ translate "tags.post" (math postsNumber '+' 0)}} </span> 
+               {{! /number of posts in the tag }}
 
-            {{! number of posts in the tag }}
-            <span>{{postsNumber}} {{ translate "tags.post" (math postsNumber '+' 0)}} </span> 
-            {{! /number of posts in the tag }}
-
-            {{! tag description }}
-            {{#if description}}
-               <p>{{description}}</p>                   
-            {{/if}}
-            {{! /tag description }}
-
-            
+               {{! tag name }}                
+               <h2>
+                  <a href="{{url}}">{{name}}</a>
+               </h2>
+               {{! /tag name }}
+            </article>
+          </section>
          </li>
       {{/each}}
       {{! /loop that generates a list of tags }}
    </ul>
 
 </main>
-<aside>
+{{!-- <aside>
    {{> sidebar}} 
-</aside>
+</aside> --}}
 
 {{> footer}}

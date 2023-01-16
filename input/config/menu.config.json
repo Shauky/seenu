@@ -19,10 +19,60 @@
                 "id": 1670250391041,
                 "label": "Campaigns",
                 "title": "campaigns",
-                "type": "post",
+                "type": "separator",
                 "target": "_self",
                 "rel": "campaigns",
-                "link": 5,
+                "link": "",
+                "cssClass": "iss",
+                "isHidden": false,
+                "items": [
+                    {
+                        "id": 1670741239841,
+                        "label": "Causes",
+                        "title": "causes",
+                        "type": "tags",
+                        "target": "_self",
+                        "rel": "causes",
+                        "link": "empty",
+                        "cssClass": "iss",
+                        "isHidden": false,
+                        "items": []
+                    }
+                ]
+            },
+            {
+                "id": 1672760642266,
+                "label": "Learn",
+                "title": "learn",
+                "type": "separator",
+                "target": "_self",
+                "rel": "learn main",
+                "link": "",
+                "cssClass": "iss",
+                "isHidden": false,
+                "items": [
+                    {
+                        "id": 1672760730310,
+                        "label": "buildwithcode",
+                        "title": "build",
+                        "type": "internal",
+                        "target": "_self",
+                        "rel": "buildwithcode",
+                        "link": "campaigns.html",
+                        "cssClass": "iss",
+                        "isHidden": false,
+                        "items": []
+                    }
+                ]
+            },
+            {
+                "id": 1672760759294,
+                "label": "Shop",
+                "title": "shop",
+                "type": "internal",
+                "target": null,
+                "rel": "shop",
+                "link": "shop",
                 "cssClass": "",
                 "isHidden": false,
                 "items": []
