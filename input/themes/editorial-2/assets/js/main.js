@@ -4,6 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
 (function($) {
 
 	var	$window = $(window),
@@ -235,32 +236,31 @@
 			// 	});
 
 	// Menu.
-		var $menu = $('#menu'),
-			$menu_openers = $menu.children('ul').find('.opener');
+		// var $menu = $('#menu'),
+		// 	$menu_openers = $menu.children('ul').find('.opener');
 
-		// Openers.
-			$menu_openers.each(function() {
+		// // Openers.
+		// 	$menu_openers.each(function() {
 
-				var $this = $(this);
+		// 		var $this = $(this);
 
-				$this.on('click', function(event) {
+		// 		$this.on('click', function(event) {
 
-					// Prevent default.
-						event.preventDefault();
+		// 			// Prevent default.
+		// 				event.preventDefault();
 
-					// Toggle.
-						$menu_openers.not($this).removeClass('active');
-						$this.toggleClass('active');
+		// 			// Toggle.
+		// 				$menu_openers.not($this).removeClass('active');
+		// 				$this.toggleClass('active');
 
-					// Trigger resize (sidebar lock).
-						$window.triggerHandler('resize.sidebar-lock');
+		// 			// Trigger resize (sidebar lock).
+		// 				$window.triggerHandler('resize.sidebar-lock');
 
-				});
+		// 		});
 
-			});
+		// 	});
 
 })(jQuery);
-
 
 // Publii Staff
 // Share buttons pop-up
@@ -362,3 +362,53 @@
 		}
 	}
 })();
+
+
+// toggle menu links & post counts
+
+
+(function($) {
+	let sublinks = Array.from(document.querySelectorAll('.hidden-btn'));
+	let links = Array.from(document.querySelectorAll('.opener'));
+	let postcount = Array.from(document.querySelectorAll('.postcount'));
+
+    hideEls(sublinks); // hide all elements initially
+    
+	function postcountmarker() {
+		let count = 0
+		postcount.forEach(el => {
+			count = count += 1;
+			el.innerHTML = "0" + count.toString()
+			return count
+			})
+		};
+	postcountmarker();
+	 
+function hideEls (els) {
+  if (Array.isArray(els)) {
+    els.forEach(el => {
+      el.style.display = 'none';
+    });
+  }
+  return;
+}
+
+function toggleEl (els, i) {
+  // check if the element is hidden or not
+  if (els[i].style.display === 'none') {
+    els[i].style.display = 'block';
+  } else {
+    els[i].style.display = 'none';
+  }
+}
+links.forEach((link, i) => {
+  link.addEventListener('mouseenter', toggleEl.bind(null, sublinks, i));
+  link.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+      toggleEl(sublinks, i);
+    }, 500);
+  });
+});
+})(jQuery);
+
+

@@ -23,6 +23,10 @@
                      
                   }
 
+                  .nav-toggle{
+                     visibility: hidden;
+                  }
+
                   .SN_site_HeaderL {
                      display: flex;
                      align-items: flex-end;
@@ -51,7 +55,7 @@
 
                   .logo{
                      /* SeenuPost */
-                     width: 613px;
+                     width: 740px;
                      height: 31px;
                      font-family: 'Roboto Condensed';
                      font-style: normal;
@@ -87,8 +91,69 @@
                      flex-grow: 0;
                   }
 
+                  .SN_site_MenuX{
+                     visibility: hidden;
+                     display: inline-block;
+                     position: absolute;
+                     float: left;
+                     width: 400px;
+                     top: 0px;
+                     left: 700px;
+                  }
 
-              </style>
+               @media all and (max-width: 1005px) {
+
+                  .SN_site_MenuX{
+                     visibility: visible;
+                     display: inline-block;
+                     position: absolute;
+                     float: left;
+                     align-items: center;
+                     background-color: var(--dark);
+                     opacity: var(--see-through);
+                     justify-content: center;
+                     width: 300px;
+                     height: 100vh;
+                     top: 0px;
+                     left: 600px;
+                  }
+
+                  .logo{
+                     width: 790px;
+
+                  }
+                  .nav-toggle{
+                     visibility: visible;
+                     position: inherit;
+                  }
+
+                  .SN_site_HeaderR nav {
+                     display: none;
+                  }
+               }
+        
+               @media all and (max-width: 680px) {
+
+                  .SN_site_MenuX{
+                     visibility: visible;
+                     position: absolute;
+                     float: left;
+                     width: 300px;
+                     top: 0px;
+                     left: 400px;
+                  }
+
+                  .logo{
+                     width: 450px;
+
+                  }
+                  .nav-toggle{
+                     visibility: visible;
+                     position: inherit;
+                  }
+
+               }
+               </style>
 
                {{!-- logo, social buttons and later search bar inside header --}}
 
@@ -160,7 +225,9 @@
                {{!-- navbar --}}
                <div class="SN_site_HeaderR">
                {{#checkIfAny menus.mainMenu @config.custom.socialButtons}}
-               
+                  <button class="nav-toggle">
+                     <i class="fa fa-bars"></i>
+                  </button>
                   <nav id="nav">
                      {{#if menus.mainMenu}}
                         {{> menu menus.mainMenu}}
@@ -171,12 +238,18 @@
 
 
                {{!-- Hamburger menu --}}
-               <div class="S_site_Menu">
+               <div class="SN_site_Menu">
                     <div class="S_site_MenuIcon" style="display: block;">
                         <i class="icon-hamburger-menu-3"></i>
                     </div>
-                    <div class="S_site_MenuX" style="display: none;">
+                    <div class="SN_site_MenuX" style="display: flex; z-index:1000;">
                         <i class="icon-close-x"></i>
+                        <p>x menu</p>
+                         <nav id="small-nav" style="width: 400px;">
+                           {{#if menus.mainMenu}}
+                              {{> menu menus.mainMenu}}
+                           {{/if}}
+                        </nav>
                     </div>
                </div>
             </header>

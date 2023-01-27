@@ -10,7 +10,7 @@
       text-transform: uppercase;
       font-style: normal;
       font-weight: 600;
-      width: 300px;
+      width: 400px;
       height: 16px;
       display: flex;
       align-items: space-between;
@@ -25,7 +25,48 @@
       width: 100px;
       text-decoration: none;
    }
+
+ 
 </style>
+
+
+{{!-- //<script type="text/javascript">
+   // toggle menu links 
+   var sublinks = Array.from(document.querySelectorAll('.hidden-btn'));
+   var links = Array.from(document.querySelectorAll('.menu-btn'));
+
+   $(function() {
+   hideEls(sublinks); // hide all elements initially
+
+   function hideEls (els) {
+   if (Array.isArray(els)) {
+      els.forEach(el => {
+         el.style.display = 'none';
+      });
+   }
+   return;
+   }
+
+   function toggleEl (els, i) {
+   // check if the element is hidden or not
+   if (els[i].style.display === 'none') {
+      els[i].style.display = 'block';
+   } else {
+      els[i].style.display = 'none';
+   }
+   }
+   links.forEach((link, i) => {
+   link.addEventListener('mouseenter', toggleEl.bind(null, sublinks, i));
+   link.addEventListener('mouseleave', () => {
+      setTimeout(() => {
+         toggleEl(sublinks, i);
+      }, 500);
+   });
+   });
+
+   });
+
+</script> --}}
 
 
 <ul{{#if level}} class="submenu level-{{level}}" aria-hidden="true"{{/if}}>
@@ -46,7 +87,7 @@
             {{#if items}} 
                aria-haspopup="true" 
                class="opener"
-            {{/if}}>
+            {{/if}} >
             {{label}}
          </a>
       {{else}}
@@ -59,13 +100,15 @@
                class="opener"
             {{else}}
                class="is-separator"
-            {{/if}}>
+            {{/if}} class="menu-btn">
             {{label}}
          </span>
       {{/if}}
 
       {{#if items}}
+      <article class="hidden hidden-btn">
          {{> menu}}
+      </article>
       {{/if}}
    </li>
    {{/each}}

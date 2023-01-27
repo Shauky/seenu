@@ -1,16 +1,1 @@
-:root{
-    --white:#fff;
-    --main-font: 'HelveticaNeueW01-55Roma','neue-haas-unica', sans-serif;
-}
-
-body{
-    padding: 0px;
-    margin: 0px;
-    background-color: var(--white);
-    color: black;
-    font-family: var(--main-font);
-}
-
-html {
-    overflow-x: hidden;
-}
+*{box-sizing:border-box;margin:0;padding:0}body{padding:0px;margin:0px;line-height:14px;background-color:#fff;color:#000;font-family:"Inter","HelveticaNeueW01-55Roma","neue-haas-unica",sans-serif;font-size:15px}p{line-height:normal}.big-custom .title_para{font-weight:900;margin-block-start:5pt;margin-block-end:5pt;margin-inline-start:0px;margin-inline-end:0px}.big-custom .title_para:hover{color:dimgray}.big-custom .SN_featrestub{width:80%}html{overflow-x:hidden}article{height:0 !important}

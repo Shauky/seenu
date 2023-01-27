@@ -1,4 +1,6 @@
 compute/
+seenu-files/
+ecommerce/
 env/
 .DS_Store
 input/themes/seenu/node_modules
@@ -9,6 +11,7 @@ package.json
 package-lock.json
 preview/
 output/
+themes/seenu/
 input/media
 input/root-files
 input/languages

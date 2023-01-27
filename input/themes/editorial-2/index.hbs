@@ -1,101 +1,503 @@
 {{> head }}
 {{!-- drop everything after --}}
 <style>
+     :root{
+        --dark: #000;
+        --see-through: 0.8;
+        --site-width: 1160px;
+
+    }
+    .SN_site{
+        position: relative;
+        left: 163px;
+    }
+
+    .SN_leftspacer{
+        position: absolute;
+        left:163px;
+    }
+
+    .SN_hr{
+        position: absolute;
+        width: 1098px;
+        height: 1px;
+        left: calc(49% - 1098px/2 + 0px);
+        top: 66px;
+        background: #000000;
+        }
+
+    .SN_site_InsideScroll{
+        /* Auto layout */
+        display: block;
+        padding: 0px;
+        position: absolute;
+        width: 1160px;
+        height: auto;
+    }
+
+    .SN_site_ContentArea{
+        /* Auto layout */
+        /*display: flex;*/
+        /*flex-direction: row;*/
+        align-items: space-between;
+        gap: 10px;
+        padding: 0px;
+        position: absolute;
+        /* width: 1239.86px; */
+        /* height: 3819.09px; */
+        height: 0 !important;   
+        left: 15px;
+        top: 85px;
+    }
+
+    .SN_site_ContentArea article {
+        display:flex;
+    }
+    
+    .hero_left {
+        margin-right: 30px;
+        display: inline-block;
+    }
+
+   /* width: 100%;
+    margin: 0px; */
+    .hero_left .img_wrapper {
+        position: relative;
+        background-color: var(--dark);
+        width: 730px;
+        top: 0;
+        height: 301px;
+        left: 5px;
+        display: block;
+    }
+    
+    .hero_left img {
+        position: absolute;
+        width: auto !important;
+        height: 301px;
+        left: 0;
+        margin-right: 20px;
+        padding: 0px;
+        display: block;
+    }
+
+    .sidebox{
+        position: absolute;
+        width: 352px;
+        height: 548px;
+        left: 750px;
+        background:var(--dark);
+    }
+
+
+    .hero_right {
+        width: 55%;
+        height: 0 !important;
+        left: 0;
+        vertical-align: center;
+    }
+
+    .hero_label{
+        font-family: 'Roboto Condensed', 'Asap Condensed', 'neue-haas-unica', sans-serif;
+        font-weight: 600;
+        font-size: 12pt;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        border-bottom: 3px solid black;
+        display: inline-block;
+        width: 170px;
+        margin-top:40px;
+    }
+
+
+    div .big-custom{
+        position:relative;
+        width: 450px;
+        margin-right: 5px;
+        height: 205px;
+        left: 0;
+        top: 50px;
+        text-decoration: none;
+    }
+
+    .big-custom a{
+        text-decoration: none;
+    }
+
+    .big-custom p{
+        font-family: source-serif-pro, 'Source Serif Pro', serif !important;
+        font-weight: 900;
+        text-decoration: none;
+        width: 62%;
+        margin-right: 30px;
+        font-size: 52.6664px;
+        line-height: 35pt;
+    }
+
+    .big-custom p:hover{
+        text-decoration: underline;
+    }
+
+    .hero_byline, .hero_byline div{
+        position:relative;
+        font-family: 'HelveticaNeueW01-45Ligh','neue-haas-unica', sans-serif;
+        font-size: 10pt;
+        line-height: 18pt;
+        margin-bottom: 0px;
+        display: inline-block;
+    }
+
+    @media all and (max-width: 1200px){
+         .SN_site{
+            width:calc(var(--site-width)- 5px);
+            margin-left: 50px;
+            left: 0;
+        }
+
+    }
+
+    @media all and (max-width: 1005px) {
+
+        body{
+            font-size: 10pt;
+        }
+
+        .SN_site{
+            width:calc(var(--site-width)- 500px);
+            left: 0;
+        }
+
+
         .SN_hr{
-            position: absolute;
-            width: 1160px;
+            position:relative;
+            box-sizing: border-box;
             height: 1px;
-            left: calc(50% - 1160px/2 + 15.11px);
-            top: 66px;
+            width: 70%;
+            background: black;
+        }
 
-            background: #000000;
-            }
-
-        .SN_site_InsideScroll{
+            .SN_site_ContentArea{
             /* Auto layout */
-            display: block;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 900px !important;
+            /* height: 3819.09px; */
+            left: 30.23px;
+            top: 85px;
+        }
+
+        .hero_left img {
+            width: 96%;
+            height: auto !important;
+            margin: 0px;
+            margin-right: 20px;
             padding: 0px;
-            position: absolute;
-            width: 1160px;
-            height: auto;
-            left: 4%;
+            display: block;
+        }
+
+
+        .big-custom p{
+            font-family: source-serif-pro, 'Source Serif Pro', serif !important;
+            font-weight: 800;
+            font-size: 32.6664px;
+            line-height: 28pt;
+        }
+
+        .big-custom div{
+            font-size: 9pt;
+        }
+        .hero_byline{
+            margin-top: 0;
+        }
+    }
+    
+    @media all and (max-width: 680px) {
+
+        body{
+            font-size: 9pt;
+        }
+        
+
+        .SN_hr{
+            position:relative;
+            box-sizing: border-box;
+            height: 1px;
+            width: 40%;
+            background: black;
+        }
+
+        .hero_left img {
+            width: 80%;
+            height: auto !important;
+            margin: 0px;
+            margin-right: 20px;
+            padding: 0px;
+            display: block;
         }
 
         .SN_site_ContentArea{
             /* Auto layout */
-            display: flex;
-            flex-direction: row;
-            align-items: space-between;
-            gap: 10px;
-            padding: 0px;
-            position: absolute;
-            width: 1239.86px;
-            height: 3819.09px;
-            left: 30.23px;
-            top: 65px;
-        }
-
-        .SN_site_ContentArea a{
-            width: 1239.86px;
-        }
-        
-         .hero_left {
-            width: 100%;
             display: inline-block;
+            max-width: 600px !important;
+            /* height: 3819.09px; */
         }
 
-        .hero_left img {
-            width: 100%;
-            margin: 0px;
-            padding: 0px;
-            display: block;
+        .SN_site_ContentArea article {
+            display:inline-block;
+            width: 100% !important;
+        }
+
+            .hero_label{
+            color: #000000;
+            font-family: 'Roboto Condensed', 'Asap Condensed', 'neue-haas-unica', sans-serif;
+            font-weight: 600;
+            font-size: 12pt;
+            letter-spacing: 0px;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+            border-bottom: 3px solid black;
+            display: inline-block;
+            padding-top: 15%;
         }
 
         .hero_right {
             display: inline-block;
-            width: 100%;
-            vertical-align: center;
+            width: 75%;
+            height: 0 !important;
+            left: 0;
         }
+
+
+        div .big-custom{
+            height: 0 !important;
+        }
+
+        .big-custom p{
+            font-family: source-serif-pro, 'Source Serif Pro', serif !important;
+            font-weight: 900;
+            font-size: 52.6664px;
+            line-height: 35pt;
+            margin-right: 75px;
+
+        }
+
+        .hero_label{
+            margin-right: 100px;
+        }
+
+        .big-custom p:hover{
+            text-decoration: underline;
+        }
+
+        .big-custom div{
+            font-size: 11pt;
+        }
+
+        .hero_byline, .hero_byline div{
+            position:absolute;
+            margin-top: 15pt;
+            font-family: 'HelveticaNeueW01-45Ligh','neue-haas-unica', sans-serif;
+            font-size: 10pt;
+            line-height: 18pt;
+            margin-bottom: 0px;
+            display: inline-block;
+        }
+
+        .border-x{
+            margin-top: -10pt;
+        }
+
+    }
+
 </style>
 
 <main>
-    <div id="SN_site" class="SN_site">
-            <div class="SN_site_InsideScroll" style="margin-left: 6%; margin-right: 10%; padding-left: 2%;"> 
+    <div id="SN_site" class="SN_site" >
+        <div class="SN_leftspacer"></div>
+            <div class="SN_site_InsideScroll"> 
                 <div class="SN_site_Header">
                     {{> top }}
                 </div>
                 <div class="SN_hr"> </div>
                 {{!-- end header --}}
             </div>
-            <div class="SN_site_ContentArea" style="width:auto;">
+            <div class="SN_site_ContentArea" style="width: auto; margin-bottom: 10px;">
+            <div class="SN_feature">
             {{#each featuredPosts}}
-                <a style="display:flex;">
-                    {{#featuredImage}}
-                    <div class="hero_left">
+                <article>
+                    <div class="herobox" style="display: flex; flex-direction: column;">
+                        <a>
+                            {{#featuredImage}}
+                            <div class="hero_left">  
+                                {{#if url}}
+                                <div class="img_wrapper">
+                                    <img class="feature-img" src="{{url}}"
+                                    {{#if @config.site.responsiveImages}}
+                                        {{responsiveImageAttributes 'featuredImage' srcset sizes}}
+                                    {{/if}}
+                                    {{lazyload "lazy"}}
+                                    height="{{height}}"
+                                    width="{{width}}"
+                                    alt="{{alt}}">
+                                {{/if}}
+                                {{! /checks if an image exists }}
+                                </div>
+                            </div>
+                            {{/featuredImage}}
+                        </a>
+                        {{! /featured image }}
                         {{#if url}}
-                        <figure>
-                            <img class="feature-img" src="{{url}}"
-                            {{#if @config.site.responsiveImages}}
-                                {{responsiveImageAttributes 'featuredImage' srcset sizes}}
-                            {{/if}}
-                            {{lazyload "lazy"}}
-                            height="{{height}}"
-                            width="{{width}}"
-                            alt="{{alt}}">
-                        </figure>
-                        {{/if}}
-                        {{! /checks if an image exists }}
+                        <div class="hero_right" style="display:flex; gap:10px; flex-direction:row;">
+                            <article style="width: 80%; display: inline-block;">
+                                {{#if hasCustomExcerpt}}
+                                        <div style="line-height: 12pt; display:flex; gap:50px;">
+                                            <a href = "{{url}}" title="{{title}}" class="big-custom" >
+                                              <p>{{{ title }}}</p>
+                                            </a>
+                                        </div>
+                                {{/if}}
+                                {{! /post excerpt }}
+                                <div style="margin-top:0;">
+                                    <article class="hero_byline">
+                                        {{#author}}
+                                        <small style="display:flex; flex-direction: row; gap: 5px;"> 
+                                            <span> By </span>
+                                            <strong><a href="{{url}}">{{name}}</a></strong><br>
+                                            <span class="heromodule_chim"> | </span>
+                                            <time datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}">
+                                            {{date createdAt}}
+                                            </time>
+                                        </small>
+                                        <span style="margin-left: 10px; margin-top: 3px;">
+                                            <p class="border-x">
+                                            <small><i class="fa fa-bookmark-o"></i>READ LATER</small></p>
+                                        </span>
+                                        {{/author}}
+                                    </article>
+                                </div>
+                            </article>
+                              <div style="margin-left: -100px;  line-height: 12pt; display:flex; gap:50px;">
+                                <div>
+                                    {{{excerpt}}}
+                                </div>
+                              </div>
+                        </div>
                     </div>
-                    {{/featuredImage}}
-                </a>
-                            {{! /featured image }}
-                <div class="hero_right">
-                    <a href="{{url}}">
-                        <h3>{{title}}</h3>
-                    </a>
-                </div>
+                    <style>
+                        .side-main{
+                            color: white;
+                            margin-top: 20px;
+                            padding: 15px;
+                        }
+                        .side-main p {
+                            font-family: 'HelveticaNeueW01-45Ligh', 'neue-haas-unica', sans-serif;
+                            font-style: normal;
+                            font-weight: lighter;
+                            font-size: 16px;
+                            line-height: 20px;
+                            /* or 125% */
+
+                            display: flex;
+                            align-items: center;
+
+                            color: #FFFFFF;
+                        }
+                    </style>
+
+                    {{! side box this issue features}}
+                    <div class="sidebox">
+                        <article class="side-main" style="display:flex; flex-direction: column;">
+                            <div class="box-spacer" style="padding:2px; margin-top: 10px; margin-bttom:10px; "></div>
+                            <div>
+                                <h1 style="font-size: 32px;">This Issue</h1>
+                            </div>
+                            <br><br>
+                            <a>
+                                Hydrogen VS Electric Cars
+                            </a>
+                            <br>
+                            <p style="font-size: 10pt; font-weight: 100; margin-bottom:30px;"> Will hydrogen-fueled cars ever catch up with EVs?</p>
+                        <hr>
+
+                        </article>
+                    </div>
+                    {{!/ end this issue features}}
+                    {{/if}}
+                </article>
             {{/each}}
             </div>
+            <style>
+                .SN_Article-topfirst{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
+                    padding: 0px;
+                    gap: 27.3px;
+
+                    position: relative;
+                    width: 1239.86px;
+                    height: 135px;
+                    left: 0;
+                    top: 600.53px;
+                }
+                
+                .SN_Article-topfirst img{
+                    position: relative;
+                    width: 107px;
+                    height: 135px;
+                    left: 8.23px;
+                    background: #D9D9D9;
+                }
+
+                @media all and (max-width: 1005px) {
+                    .SN_Article-topfirst{
+                        top: 339.53px;
+                
+                    }
+
+                }
+
+                @media all and (max-width: 680px) {
+                    .SN_Article-topfirst{
+                        top: 720px;
+                
+                    }
+
+                }
+                
+            </style>
+            {{!-- begin top articles  --}}
+            
+            <div class="SN_Article-topfirst" > 
+                <div class="ArticleItem-Top" style="width:90%;">
+                    <div class="ArticleItem" style="display:flex; gap: 20px; flex-direction: row;">
+                     {{#getPostsByTags "count=3&allowed=hidden&tag_as=id&tags=1,2,3,4&offset=0&orderby=modifiedAt&ordering=asc"}}  
+                        <a href="/" style="display:flex; flex-direction:row; gap:20px;">
+                            <div class="ArticleItemimage">
+                                <img src="">
+                            </div>
+                            <div class="ArticleItemcopy">
+                                <div class="box-spacer" style="padding:2px; margin-top: 10px; margin-bttom:10px; "></div>
+                                
+                                <div class="box-spacer" style="padding:2px; margin-top: 5px; margin-bttom:10px; "></div>
+                                <a class="postcount" style="font-size:36px; font-weight:600; margin-bottom: 10px;"></a>
+                                <div class="ArticleTitle">
+                                    <a href="{{url}}"><strong>{{title}}</strong></a>
+                                </div>
+                                <br>
+                                <div class="ArticleDescription">
+                                        <p>{{{ excerpt }}}</p>
+                                </div>
+                            </div>
+                        </a>
+                     {{/getPostsByTags}}
+
+                    {{!-- ... second one and so on --}}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 
@@ -103,5 +505,5 @@
 
 {{!begin home footer}}
 
-{{> pagination}}
+{{!-- {{> pagination}} --}}
 {{> footer}}

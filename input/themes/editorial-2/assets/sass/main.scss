@@ -1,0 +1,84 @@
+// we're watching this now, compiled realtime. 
+
+$white: #fff;
+$dark:#000;
+$primary-soft-orange:hsl(35, 77%, 62%);
+$primary-soft-red:hsl(5, 85%, 63%);
+$neutral-off-white: hsl(36, 100%, 99%);
+$neutral-grayish-blue: hsl(233, 8%, 79%);
+$dark-grayish-blue: hsl(236, 13%, 42%);
+$very-dark-blue: hsl(240, 100%, 5%);
+$see-through: 0.8;
+
+$body-font: 'Inter','HelveticaNeueW01-55Roma','neue-haas-unica', sans-serif;
+
+$font-weight:(
+    "ninth" : 900,
+    "fourth": 400, 
+    "seventh": 700, 
+    "eighth": 800,
+    "normal": 100
+);
+
+$widths:(
+    "mobile": 375px,
+    "desktop": 1440px,
+
+    "lesser": 80%,
+    "medium": 90%,
+    "full": 100%
+);
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    padding: 0px;
+    margin: 0px;
+    line-height: 14px;
+    background-color: $white;
+    color: black;
+    font-family: $body-font;
+    font-size: 15px;
+}
+
+
+p {
+    line-height: normal;
+}
+
+.hidden {
+    visibility:hidden;
+}
+
+.big-custom {
+    .title_para{
+        font-weight: map-get($font-weight, ninth);
+        margin-block-start: 5pt;
+        margin-block-end: 5pt;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+
+        &:hover{
+            color: dimgrey;
+        }
+    }
+
+    .SN_featrestub{
+        width: map-get($widths, lesser);
+
+    }
+}
+
+html {
+    overflow-x: hidden;
+}
+
+article{
+    height: 0 !important;
+}

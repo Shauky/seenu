@@ -1,0 +1,487 @@
+[
+    {
+        "path": "404.html",
+        "type": "file",
+        "md5": "d23f4cac5c54d3eae12e7ae4b9791962"
+    },
+    {
+        "path": "assets",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "assets/css",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/assets/css/_main.css",
+        "type": "file",
+        "md5": "e7b8e99e4a070402cd223968dae87b9a"
+    },
+    {
+        "path": "/assets/css/_style.css",
+        "type": "file",
+        "md5": "d6be168bbb618ed1c4143582815329ec"
+    },
+    {
+        "path": "/assets/css/editor.css",
+        "type": "file",
+        "md5": "e5909a88ba1158a79ba2dbf82d6b2d86"
+    },
+    {
+        "path": "/assets/css/fontawesome-all.min.css",
+        "type": "file",
+        "md5": "bbcde81f26378440dac4c3d195714389"
+    },
+    {
+        "path": "/assets/css/main.css",
+        "type": "file",
+        "md5": "3c94dd912538c23d6ac226a5c4e94ecc"
+    },
+    {
+        "path": "/assets/css/photoswipe.css",
+        "type": "file",
+        "md5": "357f87f4e9502a5318d89e8e76e0a344"
+    },
+    {
+        "path": "/assets/css/style.css",
+        "type": "file",
+        "md5": "bc186231d48e1ae00c4e8e6cf868633d"
+    },
+    {
+        "path": "assets/dynamic",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "assets/js",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/assets/js/breakpoints.min.js",
+        "type": "file",
+        "md5": "81a479eb099e3b187613943b085923b8"
+    },
+    {
+        "path": "/assets/js/browser.min.js",
+        "type": "file",
+        "md5": "c07298dd19048a8a69ad97e754dfe8d0"
+    },
+    {
+        "path": "/assets/js/jquery.min.js",
+        "type": "file",
+        "md5": "7c14a783dfeb3d238ccd3edd840d82ee"
+    },
+    {
+        "path": "/assets/js/main.js",
+        "type": "file",
+        "md5": "2b99303588fcdf918b8ae9bfcf34ea9a"
+    },
+    {
+        "path": "/assets/js/main.min.js",
+        "type": "file",
+        "md5": "08add7f6d435054ad38ec38d7cf8be40"
+    },
+    {
+        "path": "/assets/js/photoswipe-ui-default.min.js",
+        "type": "file",
+        "md5": "d067f0883540b1ddda0e2c9ad1b14260"
+    },
+    {
+        "path": "/assets/js/photoswipe.min.js",
+        "type": "file",
+        "md5": "017385b552f7e0d979e2e2fe6f324015"
+    },
+    {
+        "path": "/assets/js/util.js",
+        "type": "file",
+        "md5": "fd2716a7b68ce7748c9676787b61db43"
+    },
+    {
+        "path": "/assets/js/util.min.js",
+        "type": "file",
+        "md5": "cbdaf7c20ac2883c77ae23acfbabd47e"
+    },
+    {
+        "path": "assets/sass",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/assets/sass/main.scss",
+        "type": "file",
+        "md5": "b587a853313a0dbabc11c5aa4e11efa8"
+    },
+    {
+        "path": "assets/svg",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/assets/svg/gallery-icons-dark.svg",
+        "type": "file",
+        "md5": "0c70735af58190b563b2940b7a07007a"
+    },
+    {
+        "path": "/assets/svg/gallery-icons-light.svg",
+        "type": "file",
+        "md5": "0bb1f41e2e459d23628833c37d8532f0"
+    },
+    {
+        "path": "assets/webfonts",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/assets/webfonts/fa-brands-400.eot",
+        "type": "file",
+        "md5": "b05644a0e6970debcdfc0fd82f23aa08"
+    },
+    {
+        "path": "/assets/webfonts/fa-brands-400.svg",
+        "type": "file",
+        "md5": "073c2f3ce60eaf69cc2767ef3d989078"
+    },
+    {
+        "path": "/assets/webfonts/fa-brands-400.ttf",
+        "type": "file",
+        "md5": "6c9fcd0ca0dde442dde738b116f74915"
+    },
+    {
+        "path": "/assets/webfonts/fa-brands-400.woff",
+        "type": "file",
+        "md5": "ebd4eb0cc1ab37ddb5b130cd73d3966c"
+    },
+    {
+        "path": "/assets/webfonts/fa-brands-400.woff2",
+        "type": "file",
+        "md5": "24e1b50f4d24edc02f5378718d8edebc"
+    },
+    {
+        "path": "/assets/webfonts/fa-regular-400.eot",
+        "type": "file",
+        "md5": "75c4b8ad5135473892a937ac9e096416"
+    },
+    {
+        "path": "/assets/webfonts/fa-regular-400.svg",
+        "type": "file",
+        "md5": "8fdea4e89ac405d9f8db327adb331d8d"
+    },
+    {
+        "path": "/assets/webfonts/fa-regular-400.ttf",
+        "type": "file",
+        "md5": "aee02d2631ce1bf0b15f315fdbc8a15b"
+    },
+    {
+        "path": "/assets/webfonts/fa-regular-400.woff",
+        "type": "file",
+        "md5": "d09f7b6d6c01f76269ca2c3b1c824035"
+    },
+    {
+        "path": "/assets/webfonts/fa-regular-400.woff2",
+        "type": "file",
+        "md5": "779bf2bfee7971682f99395d70dbc8e7"
+    },
+    {
+        "path": "/assets/webfonts/fa-solid-900.eot",
+        "type": "file",
+        "md5": "7afc371b7bc17aba155a585baef72b50"
+    },
+    {
+        "path": "/assets/webfonts/fa-solid-900.svg",
+        "type": "file",
+        "md5": "b557f56e367e59344ca95f9d1fb44352"
+    },
+    {
+        "path": "/assets/webfonts/fa-solid-900.ttf",
+        "type": "file",
+        "md5": "ecbca7b92b743d033cfedb359261ece9"
+    },
+    {
+        "path": "/assets/webfonts/fa-solid-900.woff",
+        "type": "file",
+        "md5": "63c029bd930de41bdad297c6043894c4"
+    },
+    {
+        "path": "/assets/webfonts/fa-solid-900.woff2",
+        "type": "file",
+        "md5": "12e8fa3cf9b326918dec547d10fe7f34"
+    },
+    {
+        "path": "authors",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "authors/editorseenu",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/authors/editorseenu/index.html",
+        "type": "file",
+        "md5": "181d2e5fdc2dc091807f8be26d9f3abf"
+    },
+    {
+        "path": "campaigns.html",
+        "type": "file",
+        "md5": "e6e20af5b4be2291fac20dcb38f87f1f"
+    },
+    {
+        "path": "dailypost",
+        "type": "file",
+        "md5": "918236ab5958a9dffe887f7e7dbeac50"
+    },
+    {
+        "path": "dear-editor.html",
+        "type": "file",
+        "md5": "6cc7ad7b1a0984bd239160467e2c1486"
+    },
+    {
+        "path": "feed.json",
+        "type": "file",
+        "md5": "81d7b0c6d821e49addfdbaf195a93eb5"
+    },
+    {
+        "path": "feed.xml",
+        "type": "file",
+        "md5": "b6860be307b152a643ce30c84f68690c"
+    },
+    {
+        "path": "index.html",
+        "type": "file",
+        "md5": "00d167b06e89930f96514248c548dc3a"
+    },
+    {
+        "path": "media",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "media/posts",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "media/posts/6",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/media/posts/6/image-web-3-desktop.jpg",
+        "type": "file",
+        "md5": "f662438047a9f308e6382dbcf42e7397"
+    },
+    {
+        "path": "media/posts/6/responsive",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/media/posts/6/responsive/image-web-3-desktop-lg.jpg",
+        "type": "file",
+        "md5": "63c0377b61af1d2db7e6f02974aee822"
+    },
+    {
+        "path": "/media/posts/6/responsive/image-web-3-desktop-md.jpg",
+        "type": "file",
+        "md5": "c886d76c7fa5bff6e8d7a7fe95636127"
+    },
+    {
+        "path": "/media/posts/6/responsive/image-web-3-desktop-sm.jpg",
+        "type": "file",
+        "md5": "4dcadaf031a74c584e87eca881e2ed5e"
+    },
+    {
+        "path": "/media/posts/6/responsive/image-web-3-desktop-xl.jpg",
+        "type": "file",
+        "md5": "b92fd00d1fa972e1ff0ba5617bb6d6b1"
+    },
+    {
+        "path": "/media/posts/6/responsive/image-web-3-desktop-xs.jpg",
+        "type": "file",
+        "md5": "3db05b5668b5ea09de729625ec74dccf"
+    },
+    {
+        "path": "/media/posts/6/responsive/image-web-3-desktop-xxl.jpg",
+        "type": "file",
+        "md5": "80ed4f28c3b43f0b9b40e82f408856e9"
+    },
+    {
+        "path": "media/tags",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "media/tags/1",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/media/tags/1/lettertoseditor.jpg",
+        "type": "file",
+        "md5": "0eafe39034f397555aab0bdde6e79100"
+    },
+    {
+        "path": "media/tags/1/responsive",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/media/tags/1/responsive/lettertoseditor-md.jpg",
+        "type": "file",
+        "md5": "c83f05e5d4b5ca8743d8aed48ac3a647"
+    },
+    {
+        "path": "/media/tags/1/responsive/lettertoseditor-sm.jpg",
+        "type": "file",
+        "md5": "3c7db82040b9bf4193254a74769f977d"
+    },
+    {
+        "path": "/media/tags/1/responsive/lettertoseditor-xl.jpg",
+        "type": "file",
+        "md5": "c83f05e5d4b5ca8743d8aed48ac3a647"
+    },
+    {
+        "path": "/media/tags/1/responsive/lettertoseditor-xs.jpg",
+        "type": "file",
+        "md5": "50e988f8f43f0038696ac1317f7f45d3"
+    },
+    {
+        "path": "media/website",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/media/website/clip.png",
+        "type": "file",
+        "md5": "9a83b78f796d86ca429f1c4dd74c2b23"
+    },
+    {
+        "path": "/media/website/clipnato.png",
+        "type": "file",
+        "md5": "6b9a9f57b9115ffb225fa9ca7c0fb31b"
+    },
+    {
+        "path": "/media/website/editor-2.png",
+        "type": "file",
+        "md5": "161064e219fa9679dfcb7a690e07efa0"
+    },
+    {
+        "path": "media/website/responsive",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/media/website/responsive/clip-md.png",
+        "type": "file",
+        "md5": "5d83f50811c4cae966c87fcb546caafb"
+    },
+    {
+        "path": "/media/website/responsive/clip-sm.png",
+        "type": "file",
+        "md5": "065863d8986947dd67e12457bddc9320"
+    },
+    {
+        "path": "/media/website/responsive/clip-xl.png",
+        "type": "file",
+        "md5": "5d83f50811c4cae966c87fcb546caafb"
+    },
+    {
+        "path": "/media/website/responsive/clip-xs.png",
+        "type": "file",
+        "md5": "2189452c89a2ff49c216fc874b268cfe"
+    },
+    {
+        "path": "/media/website/responsive/clipnato-md.png",
+        "type": "file",
+        "md5": "e03d983123925509b3b0be6332807034"
+    },
+    {
+        "path": "/media/website/responsive/clipnato-sm.png",
+        "type": "file",
+        "md5": "e03d983123925509b3b0be6332807034"
+    },
+    {
+        "path": "/media/website/responsive/clipnato-xl.png",
+        "type": "file",
+        "md5": "e03d983123925509b3b0be6332807034"
+    },
+    {
+        "path": "/media/website/responsive/clipnato-xs.png",
+        "type": "file",
+        "md5": "05e90c590c3eb8967a3bdb4a3293bd5b"
+    },
+    {
+        "path": "/media/website/responsive/editor-2-md.png",
+        "type": "file",
+        "md5": "17ab24fb5f6e20f6648b1a934048f0e9"
+    },
+    {
+        "path": "/media/website/responsive/editor-2-sm.png",
+        "type": "file",
+        "md5": "1c86bfa4a5dbdb4de68b983bff40d590"
+    },
+    {
+        "path": "/media/website/responsive/editor-2-xl.png",
+        "type": "file",
+        "md5": "78f300e24df2b18636d91bf54d88701e"
+    },
+    {
+        "path": "/media/website/responsive/editor-2-xs.png",
+        "type": "file",
+        "md5": "dbbd802cfad90fa65d27c550c7b3f490"
+    },
+    {
+        "path": "miee-mulin-aa-poastekeve.html",
+        "type": "file",
+        "md5": "07edddf2cfd4914c9a973e69f766025e"
+    },
+    {
+        "path": "robots.txt",
+        "type": "file",
+        "md5": "6658777e0c81f75e8066ce3799fd2e93"
+    },
+    {
+        "path": "sitee-kolanee-enoon.html",
+        "type": "file",
+        "md5": "7faaccc26dcfd8f833714386e3c4a509"
+    },
+    {
+        "path": "sitemap.xml",
+        "type": "file",
+        "md5": "54fa41aba71c2594c73caf7b846af0fd"
+    },
+    {
+        "path": "sitemap.xsl",
+        "type": "file",
+        "md5": "51a7bcec43fa1ef0366100d5c2edbe75"
+    },
+    {
+        "path": "tags",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "tags/education",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/tags/education/index.html",
+        "type": "file",
+        "md5": "6679212825022fe635b03ec71b8865ad"
+    },
+    {
+        "path": "/tags/index.html",
+        "type": "file",
+        "md5": "89c31151f3890ce00d487b85c2c50293"
+    },
+    {
+        "path": "the-bright-future-of-web-30.html",
+        "type": "file",
+        "md5": "a53cfcc6d6b11d544f4450951dbdbfa5"
+    }
+]
